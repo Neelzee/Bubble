@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://dflilq44r4bpa"]
+
+[ext_resource type="Texture2D" uid="uid://bajjmcm4kgrls" path="res://asset_2/backg-bob.jpg" id="1_0w8dj"]
+[ext_resource type="Texture2D" uid="uid://d3j3tpreq1uaw" path="res://asset_2/Bob-bubble.png" id="1_0yvgc"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_l6guh"]
+radius = 35.0571
+
+[node name="Bob\'s scene" type="Node2D"]
+
+[node name="Backg-bob" type="Sprite2D" parent="."]
+position = Vector2(-4, 3)
+texture = ExtResource("1_0w8dj")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("CircleShape2D_l6guh")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(-2.50001, 1)
+scale = Vector2(0.03, 0.03)
+texture = ExtResource("1_0yvgc")
