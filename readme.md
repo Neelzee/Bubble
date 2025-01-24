@@ -7,3 +7,11 @@
     - Pufferfish
 - Bubble can be bigger or smaller?
 - Win
+
+## TODO:
+
+- [ ] Pufferfish
+    - [ ] Move side-to-side
+    - [ ] Move towards player
+- [ ] Environment
+    - [ ] Coral Reef
