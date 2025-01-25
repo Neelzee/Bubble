@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://crp0174umumju"]
 
 [ext_resource type="Script" path="res://Pufferfish.cs" id="1_26w2x"]
-[ext_resource type="Texture2D" uid="uid://bpj4vlumt5dnq" path="res://ballong med spikeball.png" id="2_fhqag"]
+[ext_resource type="Texture2D" uid="uid://bpj4vlumt5dnq" path="res://assets/ballong med spikeball.png" id="2_fhqag"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_oegj8"]
 animations = [{

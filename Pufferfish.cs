@@ -5,12 +5,12 @@ public partial class Pufferfish : CharacterBody2D
 {
 	private CharacterBody2D _body;
 	[Export] public double Distance = 100;
-	private double _speed = 100;
-	private float _topSpeed = 100;
+	[Export] public double Speed = 100;
+	[Export] public float TopSpeed = 100;
 	private Vector2 _origin;
 	private AnimatedSprite2D _animatedSprite;
 
-	private bool _facingLeft = new Random().Next(0, 1) == 0;
+	private bool _facingLeft;
 
 	private bool _isTurning;
 	
@@ -31,7 +31,7 @@ public partial class Pufferfish : CharacterBody2D
 		{
 			_isTurning = true;
 			_facingLeft = !_facingLeft;
-			_speed = -_speed;
+			Speed = -Speed;
 			if (_animatedSprite != null) _animatedSprite.FlipH = _facingLeft;
 		}
 
@@ -40,14 +40,13 @@ public partial class Pufferfish : CharacterBody2D
 			_isTurning = false;
 		}
 		var velocity = _body.Velocity;
-		velocity.X += (float) (_speed * delta);
+		velocity.X += (float) (Speed * delta);
 		var bobbing = (float) Math.Sin(velocity.X * 1.5f) * (float) delta * 15.8f;
-		if (velocity.Length() >= _topSpeed)
+		if (velocity.Length() >= TopSpeed)
 		{
-			velocity = velocity.Normalized() * _topSpeed;
+			velocity = velocity.Normalized() * TopSpeed;
 		}
 		_body.Velocity = velocity;
-		GD.Print("Y: ", _body.GlobalPosition.Y + bobbing);
 		_body.GlobalPosition = new Vector2(_body.GlobalPosition.X, _body.GlobalPosition.Y + bobbing);
 		MoveAndSlide();
 	}

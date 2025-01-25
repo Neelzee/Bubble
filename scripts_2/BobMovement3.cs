@@ -3,11 +3,11 @@ using System;
 
 public partial class BobMovement3 : CharacterBody2D
 {
-	public const float Speed = 300.0f;
+	[Export] public float Speed = 300.0f;
 	public const float MaxSpeed = 1500.0f;
 	public const float Friction = 600f;
-	public const int radiusMax = 500;
-	public const int radiusMin = 30;
+	[Export] public int radiusMax = 500;
+	[Export] public int radiusMin = 30;
 	public const float bounceVar = 0.7f;
 	
 	private Vector2 InputDirection = Vector2.Zero;

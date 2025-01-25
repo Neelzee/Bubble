@@ -1,0 +1,107 @@
+[gd_scene load_steps=8 format=3 uid="uid://css3rc35wdmhx"]
+
+[ext_resource type="PackedScene" uid="uid://b8lu2tqniofbn" path="res://pufferfish.tscn" id="1_jdi0p"]
+[ext_resource type="Texture2D" uid="uid://dkxtq4hdb0yli" path="res://assets/game level placeholder.PNG" id="1_w2el0"]
+[ext_resource type="PackedScene" uid="uid://mvus02dx3ddl" path="res://wall.tscn" id="2_4jj3d"]
+[ext_resource type="PackedScene" uid="uid://dflilq44r4bpa" path="res://scenes_2/bob.tscn" id="3_v65g0"]
+[ext_resource type="PackedScene" uid="uid://bfmfa6ar2qgsh" path="res://spike.tscn" id="4_3je5f"]
+[ext_resource type="PackedScene" uid="uid://be8bcjwydtfk7" path="res://attack/side_attack.tscn" id="6_some8"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_tr3ji"]
+
+[node name="main" type="Node2D"]
+metadata/_edit_lock_ = true
+
+[node name="background" type="Sprite2D" parent="."]
+position = Vector2(4810, -29846)
+scale = Vector2(9.10979, 11.1034)
+texture = ExtResource("1_w2el0")
+
+[node name="pufferfish" parent="." instance=ExtResource("1_jdi0p")]
+position = Vector2(5037, -2807)
+scale = Vector2(10, 10)
+Distance = 1000.0
+Speed = 300.0
+TopSpeed = 300.0
+
+[node name="bob" parent="." instance=ExtResource("3_v65g0")]
+position = Vector2(4885, -1280)
+scale = Vector2(5, 5)
+
+[node name="Camera2D" type="Camera2D" parent="bob"]
+position = Vector2(1.40002, -265.8)
+zoom = Vector2(0.12, 0.12)
+limit_left = 0
+limit_right = 9619
+limit_bottom = 0
+limit_smoothed = true
+position_smoothing_enabled = true
+
+[node name="Walls" type="Node" parent="."]
+
+[node name="Node2D3" parent="Walls" instance=ExtResource("4_3je5f")]
+position = Vector2(3675, -1779)
+rotation = 0.217517
+scale = Vector2(10.2022, 5.59372)
+
+[node name="Node2D4" parent="Walls" instance=ExtResource("4_3je5f")]
+position = Vector2(6364, -1734)
+rotation = 2.96166
+scale = Vector2(10.2022, 5.59372)
+
+[node name="Node2D7" parent="Walls" instance=ExtResource("2_4jj3d")]
+position = Vector2(3432, -6303)
+scale = Vector2(69.6506, 9.40496)
+
+[node name="Node2D" parent="Walls" instance=ExtResource("2_4jj3d")]
+position = Vector2(1482, -2289)
+rotation = 0.247046
+scale = Vector2(31.4906, 5.20647)
+
+[node name="Node2D2" parent="Walls" instance=ExtResource("2_4jj3d")]
+position = Vector2(8493, -2217)
+rotation = -0.248984
+scale = Vector2(31.4906, 5.20647)
+
+[node name="Border" type="Node" parent="."]
+
+[node name="Left" type="StaticBody2D" parent="Border"]
+rotation = 1.5708
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Border/Left"]
+shape = SubResource("WorldBoundaryShape2D_tr3ji")
+
+[node name="Right" type="StaticBody2D" parent="Border"]
+position = Vector2(9619, 0)
+rotation = -1.5708
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Border/Right"]
+shape = SubResource("WorldBoundaryShape2D_tr3ji")
+
+[node name="Up" type="StaticBody2D" parent="Border"]
+position = Vector2(9614, -59684)
+rotation = 3.14159
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Border/Up"]
+shape = SubResource("WorldBoundaryShape2D_tr3ji")
+
+[node name="Down" type="StaticBody2D" parent="Border"]
+position = Vector2(9411, 0)
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Border/Down"]
+shape = SubResource("WorldBoundaryShape2D_tr3ji")
+
+[node name="sideAttack" parent="." instance=ExtResource("6_some8")]
+position = Vector2(-42, -7221)
+scale = Vector2(5, 5)
+Distance = 1600
+Speed = 750.0
+TopSpeed = 6000.0

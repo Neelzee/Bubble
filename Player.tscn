@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://d3j3tpreq1uaw" path="res://asset_2/Bob-bubble.png" id="1_i502h"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hs7g4"]
-radius = 30.0
+radius = 258.124
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dyj8s"]
 animations = [{
@@ -18,14 +18,12 @@ animations = [{
 }]
 
 [node name="Bob" type="CharacterBody2D"]
-collision_layer = 0
-collision_mask = 0
 script = ExtResource("1_4q38k")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(2, -2)
+position = Vector2(30, -6)
 shape = SubResource("CircleShape2D_hs7g4")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-scale = Vector2(0.03, 0.03)
+scale = Vector2(0.25, 0.25)
 sprite_frames = SubResource("SpriteFrames_dyj8s")

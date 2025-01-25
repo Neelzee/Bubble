@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dkxtq4hdb0yli"
-path="res://.godot/imported/game level placeholder.PNG-df25205aa177119bc6d45f759c2fd516.ctex"
+uid="uid://q41a8o3br3s6"
+path="res://.godot/imported/bubble.png-dd17930a71c5ad345ddb3eb8ec316790.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://game level placeholder.PNG"
-dest_files=["res://.godot/imported/game level placeholder.PNG-df25205aa177119bc6d45f759c2fd516.ctex"]
+source_file="res://assets/bubble.png"
+dest_files=["res://.godot/imported/bubble.png-dd17930a71c5ad345ddb3eb8ec316790.ctex"]
 
 [params]
 

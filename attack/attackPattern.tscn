@@ -1,6 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://capwv84vogysw"]
+[gd_scene load_steps=4 format=3 uid="uid://capwv84vogysw"]
 
-[ext_resource type="Texture2D" uid="uid://bb132ev3w5a8k" path="res://hai placeholder.png" id="1_2b1fk"]
+[ext_resource type="Texture2D" uid="uid://bb132ev3w5a8k" path="res://assets/hai placeholder.png" id="1_2b1fk"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ac1on"]
 animations = [{
@@ -13,27 +13,18 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_i3dmj"]
-radius = 61.3715
-height = 465.876
-
 [sub_resource type="CircleShape2D" id="CircleShape2D_whfib"]
 radius = 38.0132
 
 [node name="AttackPattern" type="CharacterBody2D"]
+collision_layer = 4
+collision_mask = 0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-3.72529e-09, -22)
 scale = Vector2(0.449925, 0.449925)
 sprite_frames = SubResource("SpriteFrames_ac1on")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.0619812, -0.371498)
-rotation = 1.5708
-shape = SubResource("CapsuleShape2D_i3dmj")
-
-[node name="Hurt" type="Area2D" parent="."]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
 position = Vector2(273, 0)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurt"]
 shape = SubResource("CircleShape2D_whfib")

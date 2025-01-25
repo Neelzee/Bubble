@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bbhhgsmeq0mn6"]
 
-[ext_resource type="Script" path="res://havfrue.gd" id="1_68ba6"]
+[ext_resource type="Script" path="res://havfrue/havfrue.gd" id="1_68ba6"]
 [ext_resource type="Texture2D" uid="uid://cgmf6ednkx0cs" path="res://icon.svg" id="2_2fk7o"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oj5jk"]

@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=3 uid="uid://le7e26uh7q2g"]
 
-[ext_resource type="Texture2D" uid="uid://dkxtq4hdb0yli" path="res://game level placeholder.PNG" id="1_bppl6"]
+[ext_resource type="Texture2D" uid="uid://dkxtq4hdb0yli" path="res://assets/game level placeholder.PNG" id="1_bppl6"]
 [ext_resource type="Texture2D" uid="uid://cgmf6ednkx0cs" path="res://icon.svg" id="1_rao1v"]
 [ext_resource type="PackedScene" uid="uid://be8bcjwydtfk7" path="res://attack/side_attack.tscn" id="2_2pl8p"]
-[ext_resource type="AudioStream" uid="uid://bt35ihnvfv4ek" path="res://underwater theme.wav" id="5_353iw"]
+[ext_resource type="AudioStream" uid="uid://bt35ihnvfv4ek" path="res://assets/underwater theme.wav" id="5_353iw"]
 [ext_resource type="PackedScene" uid="uid://crp0174umumju" path="res://balloon.tscn" id="5_lwhfu"]
 
 [node name="main" type="Node2D"]

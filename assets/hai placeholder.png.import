@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bb132ev3w5a8k"
-path="res://.godot/imported/hai placeholder.png-af0912ff1951ab39732540e4f17626a6.ctex"
+path="res://.godot/imported/hai placeholder.png-3c50e76bb79623dad30b78f95dd936d4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://hai placeholder.png"
-dest_files=["res://.godot/imported/hai placeholder.png-af0912ff1951ab39732540e4f17626a6.ctex"]
+source_file="res://assets/hai placeholder.png"
+dest_files=["res://.godot/imported/hai placeholder.png-3c50e76bb79623dad30b78f95dd936d4.ctex"]
 
 [params]
 
