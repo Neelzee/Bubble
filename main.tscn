@@ -1,19 +1,74 @@
-[gd_scene load_steps=3 format=3 uid="uid://ce6qqgjl0t0cp"]
+[gd_scene load_steps=7 format=3 uid="uid://css3rc35wdmhx"]
 
 [ext_resource type="Texture2D" uid="uid://dkxtq4hdb0yli" path="res://game level placeholder.PNG" id="1_1hrov"]
-[ext_resource type="PackedScene" uid="uid://ckcb8vn716skd" path="res://Player.tscn" id="2_bbq6a"]
+[ext_resource type="PackedScene" path="res://Player.tscn" id="2_bbq6a"]
+[ext_resource type="PackedScene" uid="uid://mvus02dx3ddl" path="res://wall.tscn" id="3_tx4v1"]
+[ext_resource type="PackedScene" uid="uid://bfmfa6ar2qgsh" path="res://spike.tscn" id="4_okf58"]
+[ext_resource type="PackedScene" uid="uid://b0hyajb24aqd2" path="res://sirkel.tscn" id="5_rgsn1"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_tr3ji"]
 
 [node name="main" type="Node2D"]
 metadata/_edit_lock_ = true
 
 [node name="background" type="Sprite2D" parent="."]
-position = Vector2(4801, -29783)
-scale = Vector2(9.10938, 11.1031)
+position = Vector2(4810, -29846)
+scale = Vector2(9.10979, 11.1034)
 texture = ExtResource("1_1hrov")
-metadata/_edit_lock_ = true
+
+[node name="Node2D" parent="." instance=ExtResource("3_tx4v1")]
+position = Vector2(1748, -6113)
+rotation = 0.247046
+scale = Vector2(31.4906, 5.20647)
+
+[node name="Node2D2" parent="." instance=ExtResource("3_tx4v1")]
+position = Vector2(8759, -6041)
+rotation = -0.248984
+scale = Vector2(31.4906, 5.20647)
 
 [node name="Bob" parent="." instance=ExtResource("2_bbq6a")]
 position = Vector2(4108, -2864)
 
 [node name="Camera2D" type="Camera2D" parent="Bob"]
+scale = Vector2(2.16982, 1.66671)
 position_smoothing_enabled = true
+
+[node name="Left" type="StaticBody2D" parent="."]
+rotation = 1.5708
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Left"]
+shape = SubResource("WorldBoundaryShape2D_tr3ji")
+
+[node name="Right" type="StaticBody2D" parent="."]
+position = Vector2(9619, 0)
+rotation = 4.71239
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Right"]
+shape = SubResource("WorldBoundaryShape2D_tr3ji")
+
+[node name="Up" type="StaticBody2D" parent="."]
+position = Vector2(9614, -59684)
+rotation = 3.14159
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Up"]
+shape = SubResource("WorldBoundaryShape2D_tr3ji")
+
+[node name="Down" type="StaticBody2D" parent="."]
+position = Vector2(9411, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Down"]
+shape = SubResource("WorldBoundaryShape2D_tr3ji")
+
+[node name="Node2D3" parent="." instance=ExtResource("4_okf58")]
+position = Vector2(3941, -5603)
+rotation = 0.217517
+scale = Vector2(10.2022, 5.59372)
+
+[node name="Node2D4" parent="." instance=ExtResource("4_okf58")]
+position = Vector2(6630, -5558)
+rotation = 2.96166
+scale = Vector2(10.2022, 5.59372)
+
+[node name="Node2D5" parent="." instance=ExtResource("5_rgsn1")]
+position = Vector2(5275, -7162)
+scale = Vector2(54.1561, 16.8882)

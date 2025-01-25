@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://bfmfa6ar2qgsh"]
+
+[ext_resource type="Texture2D" uid="uid://cgmf6ednkx0cs" path="res://icon.svg" id="1_p5in7"]
+
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_2clgf"]
+points = PackedVector2Array(0, 2, 2, 1, 0, 0)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="Icon" type="Sprite2D" parent="Area2D"]
+scale = Vector2(0.571761, 0.91199)
+texture = ExtResource("1_p5in7")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-39, 54)
+scale = Vector2(38.0195, -55.9353)
+shape = SubResource("ConvexPolygonShape2D_2clgf")
