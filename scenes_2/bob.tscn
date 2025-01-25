@@ -1,0 +1,43 @@
+[gd_scene load_steps=7 format=3 uid="uid://dflilq44r4bpa"]
+
+[ext_resource type="Texture2D" uid="uid://d3j3tpreq1uaw" path="res://asset_2/Bob-bubble.png" id="1_0yvgc"]
+[ext_resource type="Script" path="res://scripts_2/BobMovement3.cs" id="2_0iqe3"]
+[ext_resource type="Script" path="res://scripts_2/DeathBox.cs" id="3_aerp3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_x4p8y"]
+radius = 31.241
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vsvfs"]
+radius = 34.1321
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gwsfj"]
+radius = 34.0588
+
+[node name="bob" type="CharacterBody2D"]
+collision_mask = 6
+script = ExtResource("2_0iqe3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_x4p8y")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.03, 0.03)
+texture = ExtResource("1_0yvgc")
+
+[node name="death_box" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 4
+script = ExtResource("3_aerp3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="death_box"]
+shape = SubResource("CircleShape2D_vsvfs")
+
+[node name="bounce_box" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bounce_box"]
+shape = SubResource("CircleShape2D_gwsfj")
+
+[connection signal="body_entered" from="death_box" to="." method="OnBodyEnteredKillZone"]
+[connection signal="body_entered" from="bounce_box" to="." method="OnBounceBoxEntered"]
