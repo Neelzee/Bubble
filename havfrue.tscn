@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://bbhhgsmeq0mn6"]
+
+[ext_resource type="Script" path="res://havfrue.gd" id="1_68ba6"]
+[ext_resource type="Texture2D" uid="uid://cgmf6ednkx0cs" path="res://icon.svg" id="2_2fk7o"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oj5jk"]
+size = Vector2(1.02556, 62.8561)
+
+[node name="Havfrue" type="CharacterBody2D"]
+motion_mode = 1
+wall_min_slide_angle = 0.0
+script = ExtResource("1_68ba6")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+path_postprocessing = 1
+debug_enabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-91, -75)
+scale = Vector2(6366.66, 96.6708)
+shape = SubResource("RectangleShape2D_oj5jk")
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(-39, -13)
+scale = Vector2(-49.9297, 48.6074)
+texture = ExtResource("2_2fk7o")

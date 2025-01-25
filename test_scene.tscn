@@ -1,15 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://ciur1s4j8wonx"]
+[gd_scene load_steps=2 format=3 uid="uid://ciur1s4j8wonx"]
 
-[ext_resource type="PackedScene" uid="uid://pd4jdtxipjfo" path="res://gard.tscn" id="1_i6tph"]
-[ext_resource type="Texture2D" uid="uid://cgmf6ednkx0cs" path="res://icon.svg" id="2_sw2rn"]
+[ext_resource type="PackedScene" uid="uid://bbhhgsmeq0mn6" path="res://havfrue.tscn" id="1_sgvl8"]
 
 [node name="Node2D" type="Node2D"]
 
-[node name="gard" parent="." instance=ExtResource("1_i6tph")]
-
-[node name="Player" type="CharacterBody2D" parent="."]
-position = Vector2(416, 260)
-
-[node name="Icon" type="Sprite2D" parent="Player"]
-position = Vector2(2, 2)
-texture = ExtResource("2_sw2rn")
+[node name="Havfrue" parent="." instance=ExtResource("1_sgvl8")]
+position = Vector2(8914, -9796)
+scale = Vector2(0.161939, 0.16067)
