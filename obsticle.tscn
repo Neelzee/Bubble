@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3 uid="uid://c1e5ult2alhfs"]
+
+[ext_resource type="Texture2D" uid="uid://dkxtq4hdb0yli" path="res://game level placeholder.PNG" id="1_bppl6"]
+[ext_resource type="PackedScene" uid="uid://dkgkavjjueaio" path="res://shark.tscn" id="1_o328d"]
+[ext_resource type="Texture2D" uid="uid://cgmf6ednkx0cs" path="res://icon.svg" id="1_rao1v"]
+[ext_resource type="Script" path="res://Player.cs" id="3_yg5ug"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6vdtv"]
+
+[node name="main" type="Node2D"]
+
+[node name="background" type="Sprite2D" parent="."]
+position = Vector2(580, -4264)
+scale = Vector2(1.09848, 1.58705)
+texture = ExtResource("1_bppl6")
+metadata/_edit_lock_ = true
+
+[node name="shark" parent="." instance=ExtResource("1_o328d")]
+position = Vector2(365, -312)
+
+[node name="Camera2D" type="Camera2D" parent="shark"]
+position = Vector2(-360, -28)
+position_smoothing_enabled = true
+
+[node name="Player" type="CharacterBody2D" parent="."]
+position = Vector2(503, -424)
+script = ExtResource("3_yg5ug")
+
+[node name="Icon" type="Sprite2D" parent="Player"]
+position = Vector2(1, 0)
+scale = Vector2(0.179688, 0.195312)
+texture = ExtResource("1_rao1v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2(4, 0)
+shape = SubResource("CircleShape2D_6vdtv")

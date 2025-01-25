@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://b8lu2tqniofbn"]
+
+[ext_resource type="Script" path="res://Pufferfish.cs" id="1_f0y3e"]
+[ext_resource type="Texture2D" uid="uid://b4mdgu8ndpqn5" path="res://pufferfish first draft.png" id="2_us6ci"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_63en7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_us6ci")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fwixy"]
+radius = 11.0454
+
+[node name="pufferfish" type="CharacterBody2D"]
+script = ExtResource("1_f0y3e")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-2.00893, -0.843749)
+scale = Vector2(0.0273023, 0.0273023)
+sprite_frames = SubResource("SpriteFrames_63en7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, -1)
+scale = Vector2(1, 1)
+shape = SubResource("CircleShape2D_fwixy")
