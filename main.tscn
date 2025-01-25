@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://ce6qqgjl0t0cp"]
+
+[ext_resource type="Texture2D" uid="uid://dkxtq4hdb0yli" path="res://game level placeholder.PNG" id="1_1hrov"]
+[ext_resource type="PackedScene" uid="uid://ckcb8vn716skd" path="res://Player.tscn" id="2_bbq6a"]
+
+[node name="main" type="Node2D"]
+metadata/_edit_lock_ = true
+
+[node name="background" type="Sprite2D" parent="."]
+position = Vector2(4801, -29783)
+scale = Vector2(9.10938, 11.1031)
+texture = ExtResource("1_1hrov")
+metadata/_edit_lock_ = true
+
+[node name="Bob" parent="." instance=ExtResource("2_bbq6a")]
+position = Vector2(4108, -2864)
+
+[node name="Camera2D" type="Camera2D" parent="Bob"]
+position_smoothing_enabled = true

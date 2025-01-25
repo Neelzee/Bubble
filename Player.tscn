@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://ckcb8vn716skd"]
+
+[ext_resource type="Script" path="res://scripts_2/BobMovement3.cs" id="1_4q38k"]
+[ext_resource type="Texture2D" uid="uid://d3j3tpreq1uaw" path="res://asset_2/Bob-bubble.png" id="1_i502h"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hs7g4"]
+radius = 30.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dyj8s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_i502h")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Bob" type="CharacterBody2D"]
+script = ExtResource("1_4q38k")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, -2)
+shape = SubResource("CircleShape2D_hs7g4")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.03, 0.03)
+sprite_frames = SubResource("SpriteFrames_dyj8s")

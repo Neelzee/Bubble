@@ -14,7 +14,7 @@ public partial class BobMovement3 : CharacterBody2D
 	private Vector2 GetInpDir(){
 		Vector2 relativeVector = Vector2.Zero;
 		if(Input.IsActionPressed("cursor_left")){
-			Vector2 mousePosition = GetViewport().GetMousePosition();
+			Vector2 mousePosition = GetGlobalMousePosition();
 			Vector2 playerPosition = this.GlobalPosition;
 			float dist = 0;
 			relativeVector = new Vector2(playerPosition.X - mousePosition.X, playerPosition.Y - mousePosition.Y);
