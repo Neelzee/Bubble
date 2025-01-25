@@ -6,7 +6,7 @@ var player
 #	_sprite.global_position = get_global_mouse_position()
 func _ready() -> void:
 	player=get_node("../Player").global_position
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	position=get_global_mouse_position()
 	var myVector=player-position
 	rotation=myVector.angle()+PI/2
