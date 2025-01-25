@@ -17,15 +17,8 @@ position = Vector2(4810, -29846)
 scale = Vector2(9.10979, 11.1034)
 texture = ExtResource("1_w2el0")
 
-[node name="pufferfish" parent="." instance=ExtResource("1_jdi0p")]
-position = Vector2(5037, -2807)
-scale = Vector2(10, 10)
-Distance = 1000.0
-Speed = 300.0
-TopSpeed = 300.0
-
 [node name="bob" parent="." instance=ExtResource("3_v65g0")]
-position = Vector2(4885, -1280)
+position = Vector2(7233, -806)
 scale = Vector2(5, 5)
 
 [node name="Camera2D" type="Camera2D" parent="bob"]
@@ -40,27 +33,35 @@ position_smoothing_enabled = true
 [node name="Walls" type="Node" parent="."]
 
 [node name="Node2D3" parent="Walls" instance=ExtResource("4_3je5f")]
-position = Vector2(3675, -1779)
+position = Vector2(3756, -6838)
 rotation = 0.217517
 scale = Vector2(10.2022, 5.59372)
 
 [node name="Node2D4" parent="Walls" instance=ExtResource("4_3je5f")]
-position = Vector2(6364, -1734)
+position = Vector2(6445, -6793)
 rotation = 2.96166
 scale = Vector2(10.2022, 5.59372)
 
 [node name="Node2D7" parent="Walls" instance=ExtResource("2_4jj3d")]
-position = Vector2(3432, -6303)
+position = Vector2(3513, -11362)
 scale = Vector2(69.6506, 9.40496)
 
 [node name="Node2D" parent="Walls" instance=ExtResource("2_4jj3d")]
-position = Vector2(1482, -2289)
+position = Vector2(1563, -7348)
 rotation = 0.247046
 scale = Vector2(31.4906, 5.20647)
 
 [node name="Node2D2" parent="Walls" instance=ExtResource("2_4jj3d")]
-position = Vector2(8493, -2217)
+position = Vector2(8574, -7276)
 rotation = -0.248984
+scale = Vector2(31.4906, 5.20647)
+
+[node name="Node2D5" parent="Walls" instance=ExtResource("2_4jj3d")]
+position = Vector2(4768, -2202)
+scale = Vector2(31.4906, 5.20647)
+
+[node name="Node2D6" parent="Walls" instance=ExtResource("2_4jj3d")]
+position = Vector2(7829, -1656)
 scale = Vector2(31.4906, 5.20647)
 
 [node name="Border" type="Node" parent="."]
@@ -100,8 +101,36 @@ collision_mask = 0
 shape = SubResource("WorldBoundaryShape2D_tr3ji")
 
 [node name="sideAttack" parent="." instance=ExtResource("6_some8")]
-position = Vector2(-42, -7221)
+position = Vector2(-92, -12361)
 scale = Vector2(5, 5)
 Distance = 1600
 Speed = 750.0
 TopSpeed = 6000.0
+
+[node name="pufferfish" parent="." instance=ExtResource("1_jdi0p")]
+position = Vector2(4987, -7947)
+scale = Vector2(10, 10)
+Distance = 1000.0
+Speed = 300.0
+TopSpeed = 300.0
+
+[node name="pufferfish2" parent="." instance=ExtResource("1_jdi0p")]
+position = Vector2(3193, -8759)
+scale = Vector2(10, 10)
+Distance = 1500.0
+Speed = 400.0
+TopSpeed = 300.0
+
+[node name="pufferfish3" parent="." instance=ExtResource("1_jdi0p")]
+position = Vector2(8735, -10520)
+scale = Vector2(10, 10)
+Distance = 700.0
+Speed = 200.0
+TopSpeed = 300.0
+
+[node name="pufferfish4" parent="." instance=ExtResource("1_jdi0p")]
+position = Vector2(1538, -2212)
+scale = Vector2(10, 10)
+Distance = 700.0
+Speed = 200.0
+TopSpeed = 300.0

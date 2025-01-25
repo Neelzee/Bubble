@@ -1,13 +1,13 @@
 using Godot;
 using System;
 
-public partial class GoingUp : CharacterBody2D
+public partial class GoingUp : Node
 {
 	private CharacterBody2D _body;
-	private float _speed = 30;
+	private float _speed = 300;
 	public override void _Ready()
 	{
-		_body = GetNode<CharacterBody2D>(".");
+		_body = GetNode<CharacterBody2D>("../../bob");
 		if (_body == null) throw new NullReferenceException("CharacterBody2D is null");
 	}
 	
@@ -20,6 +20,6 @@ public partial class GoingUp : CharacterBody2D
 			velocity = velocity.Normalized() * _speed * 2;
 		}
 		_body.Velocity = velocity;
-		MoveAndSlide();
+		_body.MoveAndSlide();
 	}
 }
