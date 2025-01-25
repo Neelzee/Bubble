@@ -4,9 +4,9 @@ using System;
 public partial class Pufferfish : CharacterBody2D
 {
 	private CharacterBody2D _body;
-	public double Distance = 100;
-	public double Speed = 100;
-	public float TopSpeed = 100;
+	private double _distance = 100;
+	private double _speed = 100;
+	private float _topSpeed = 100;
 	private Vector2 _origin;
 	private AnimatedSprite2D _animatedSprite;
 
@@ -27,23 +27,23 @@ public partial class Pufferfish : CharacterBody2D
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
-		if (_body.Position.DistanceTo(_origin) >= Distance && !_isTurning)
+		if (_body.Position.DistanceTo(_origin) >= _distance && !_isTurning)
 		{
 			_isTurning = true;
 			_facingLeft = !_facingLeft;
-			Speed = -Speed;
+			_speed = -_speed;
 			if (_animatedSprite != null) _animatedSprite.FlipH = _facingLeft;
 		}
 
-		if (_isTurning && _body.Position.DistanceTo(_origin) <= Distance)
+		if (_isTurning && _body.Position.DistanceTo(_origin) <= _distance)
 		{
 			_isTurning = false;
 		}
 		var velocity = _body.Velocity;
-		velocity.X += (float)(Speed * delta);
-		if (velocity.Length() >= TopSpeed)
+		velocity.X += (float)(_speed * delta);
+		if (velocity.Length() >= _topSpeed)
 		{
-			velocity = velocity.Normalized() * TopSpeed;
+			velocity = velocity.Normalized() * _topSpeed;
 		}
 		_body.Velocity = velocity;
 		MoveAndSlide();
