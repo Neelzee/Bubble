@@ -45,11 +45,6 @@ public partial class BobMovement3 : CharacterBody2D
 		
 		vel = InputDirection * MaxSpeed;
 
-		var collision = MoveAndCollide((float)delta * new_vel);
-		if (collision != null){
-			GD.Print("Hello");
-		}
-		
 		if(InputDirection.X != 0){
 			new_vel.X = (float)Mathf.MoveToward(Velocity.X, vel.X, delta*Speed*scaleSpeedX);
 		}
@@ -81,6 +76,6 @@ public partial class BobMovement3 : CharacterBody2D
 	}
 
 	public void OnBodyEnteredKillZone(PhysicsBody2D body){
-		QueueFree();
+		GetTree().CallDeferred("reload_current_scene");
 	}
 };
