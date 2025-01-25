@@ -1,11 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://c1e5ult2alhfs"]
+[gd_scene load_steps=6 format=3 uid="uid://le7e26uh7q2g"]
 
 [ext_resource type="Texture2D" uid="uid://dkxtq4hdb0yli" path="res://game level placeholder.PNG" id="1_bppl6"]
-[ext_resource type="PackedScene" uid="uid://dkgkavjjueaio" path="res://shark.tscn" id="1_o328d"]
 [ext_resource type="Texture2D" uid="uid://cgmf6ednkx0cs" path="res://icon.svg" id="1_rao1v"]
-[ext_resource type="Script" path="res://Player.cs" id="3_yg5ug"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_6vdtv"]
+[ext_resource type="PackedScene" uid="uid://be8bcjwydtfk7" path="res://attack/side_attack.tscn" id="2_2pl8p"]
+[ext_resource type="AudioStream" uid="uid://bt35ihnvfv4ek" path="res://underwater theme.wav" id="5_353iw"]
+[ext_resource type="PackedScene" uid="uid://crp0174umumju" path="res://balloon.tscn" id="5_lwhfu"]
 
 [node name="main" type="Node2D"]
 
@@ -15,22 +14,34 @@ scale = Vector2(1.09848, 1.58705)
 texture = ExtResource("1_bppl6")
 metadata/_edit_lock_ = true
 
-[node name="shark" parent="." instance=ExtResource("1_o328d")]
-position = Vector2(365, -312)
+[node name="sideAttack2" parent="." instance=ExtResource("2_2pl8p")]
+position = Vector2(975, -577)
+IsGoingRight = false
 
-[node name="Camera2D" type="Camera2D" parent="shark"]
-position = Vector2(-360, -28)
+[node name="sideAttack" parent="." instance=ExtResource("2_2pl8p")]
+position = Vector2(-40, -736)
+
+[node name="Bob" type="CharacterBody2D" parent="."]
+position = Vector2(600, -1853)
+
+[node name="BackgroundMusic" type="AudioStreamPlayer2D" parent="Bob"]
+position = Vector2(-1, -2)
+stream = ExtResource("5_353iw")
+autoplay = true
+
+[node name="Camera2D" type="Camera2D" parent="Bob"]
+position = Vector2(0, 1)
+limit_left = 0
+limit_right = 1161
+limit_bottom = 0
+limit_smoothed = true
 position_smoothing_enabled = true
 
-[node name="Player" type="CharacterBody2D" parent="."]
-position = Vector2(503, -424)
-script = ExtResource("3_yg5ug")
-
-[node name="Icon" type="Sprite2D" parent="Player"]
+[node name="Icon" type="Sprite2D" parent="Bob"]
 position = Vector2(1, 0)
 scale = Vector2(0.179688, 0.195312)
 texture = ExtResource("1_rao1v")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
-position = Vector2(4, 0)
-shape = SubResource("CircleShape2D_6vdtv")
+[node name="Balloon" parent="." instance=ExtResource("5_lwhfu")]
+position = Vector2(664, -2039)
+Distance = 300.0

@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://be8bcjwydtfk7"]
+
+[ext_resource type="Script" path="res://attack/SideAttack.cs" id="1_bkcsk"]
+[ext_resource type="PackedScene" uid="uid://capwv84vogysw" path="res://attack/attackPattern.tscn" id="1_k5uuu"]
+[ext_resource type="PackedScene" uid="uid://dtxa6c2kjc1ha" path="res://attack/attackWarning.tscn" id="2_2ss15"]
+
+[node name="sideAttack" type="Node2D"]
+script = ExtResource("1_bkcsk")
+
+[node name="AttackPattern" parent="." instance=ExtResource("1_k5uuu")]
+position = Vector2(-393, 0)
+
+[node name="AttackWarning" parent="." instance=ExtResource("2_2ss15")]
+position = Vector2(112, 0)
