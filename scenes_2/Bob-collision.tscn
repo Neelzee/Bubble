@@ -1,0 +1,45 @@
+[gd_scene load_steps=6 format=3 uid="uid://n31hogv81j62"]
+
+[ext_resource type="PackedScene" uid="uid://dflilq44r4bpa" path="res://scenes_2/bob.tscn" id="1_g31i8"]
+[ext_resource type="Texture2D" uid="uid://c7rlccnl5hxp8" path="res://asset_2/black.png" id="2_nggdl"]
+[ext_resource type="Texture2D" uid="uid://bajjmcm4kgrls" path="res://asset_2/backg-bob.jpg" id="3_q4iey"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lpjr7"]
+size = Vector2(2020, 2040)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_88rr1"]
+size = Vector2(30, 30)
+
+[node name="Bob-collision" type="Node2D"]
+
+[node name="bob" parent="." instance=ExtResource("1_g31i8")]
+
+[node name="Camera2D" type="Camera2D" parent="bob"]
+
+[node name="wall" type="StaticBody2D" parent="."]
+position = Vector2(366, 26)
+scale = Vector2(0.05, 0.05)
+collision_layer = 2
+collision_mask = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wall"]
+position = Vector2(-9.99854, 6.10352e-05)
+scale = Vector2(0.999999, 0.999999)
+shape = SubResource("RectangleShape2D_lpjr7")
+
+[node name="Sprite2D" type="Sprite2D" parent="wall"]
+position = Vector2(-11.9996, 3.8147e-05)
+scale = Vector2(0.988281, 1)
+texture = ExtResource("2_nggdl")
+
+[node name="dangerous_wall" type="StaticBody2D" parent="."]
+position = Vector2(243, 121)
+collision_layer = 4
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="dangerous_wall"]
+shape = SubResource("RectangleShape2D_88rr1")
+
+[node name="Sprite2D" type="Sprite2D" parent="dangerous_wall"]
+scale = Vector2(0.0474339, 0.0833333)
+texture = ExtResource("3_q4iey")
