@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://c1e5ult2alhfs"]
+
+[ext_resource type="Texture2D" uid="uid://cgmf6ednkx0cs" path="res://icon.svg" id="1_rao1v"]
+[ext_resource type="PackedScene" uid="uid://b8lu2tqniofbn" path="res://pufferfish.tscn" id="1_xmxeh"]
+
+[node name="main" type="Node2D"]
+
+[node name="background" type="Sprite2D" parent="."]
+position = Vector2(577, -9439.5)
+scale = Vector2(9.10938, 148.508)
+texture = ExtResource("1_rao1v")
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_xmxeh")]
+position = Vector2(583, -278)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(583, -278)
