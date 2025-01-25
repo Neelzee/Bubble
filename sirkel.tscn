@@ -7,12 +7,13 @@
 [node name="Node2D" type="Node2D"]
 scale = Vector2(1.86156, 1.27692)
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="StaticBody" type="StaticBody2D" parent="."]
+collision_mask = 0
 
-[node name="Icon" type="Sprite2D" parent="Area2D"]
+[node name="Icon" type="Sprite2D" parent="StaticBody"]
 scale = Vector2(0.571761, 0.91199)
 texture = ExtResource("1_kvs8g")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody"]
 scale = Vector2(3.52037, 5.73339)
 shape = SubResource("CircleShape2D_k7tol")

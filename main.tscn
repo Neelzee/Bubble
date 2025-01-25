@@ -1,12 +1,18 @@
-[gd_scene load_steps=7 format=3 uid="uid://css3rc35wdmhx"]
+[gd_scene load_steps=9 format=3 uid="uid://css3rc35wdmhx"]
 
 [ext_resource type="Texture2D" uid="uid://dkxtq4hdb0yli" path="res://game level placeholder.PNG" id="1_1hrov"]
-[ext_resource type="PackedScene" path="res://Player.tscn" id="2_bbq6a"]
+[ext_resource type="PackedScene" uid="uid://b3y4o8fnebjdw" path="res://Player.tscn" id="2_bbq6a"]
 [ext_resource type="PackedScene" uid="uid://mvus02dx3ddl" path="res://wall.tscn" id="3_tx4v1"]
 [ext_resource type="PackedScene" uid="uid://bfmfa6ar2qgsh" path="res://spike.tscn" id="4_okf58"]
 [ext_resource type="PackedScene" uid="uid://b0hyajb24aqd2" path="res://sirkel.tscn" id="5_rgsn1"]
+[ext_resource type="PackedScene" uid="uid://bbhhgsmeq0mn6" path="res://havfrue.tscn" id="6_oojm2"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_tr3ji"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_es6aw"]
+vertices = PackedVector2Array(1038.59, -8380.96, 938.703, -6742.91, 68.0234, -6906.29, 75.9609, -9468.01, 7856.92, -9476.01, 4902.08, -8397, 7886.69, -8337.85, 82.7969, -10835.9, 66.2031, -11682, 9518.08, -11640, 8007.2, -10785.9, 9528, -10542.9, 9511.03, -6747.68, 8363.33, -6584.14)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(0, 3, 4, 5), PackedInt32Array(6, 5, 4), PackedInt32Array(7, 8, 9, 10), PackedInt32Array(6, 4, 10, 9, 11, 12, 13)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(7848, -9486, 66, -9478, 58, -6898, 948, -6731, 1048, -8371, 4902, -8387, 7879, -8328, 8356, -6573, 9521, -6739, 9538, -10543, 9528, -11650, 56, -11692, 73, -10826, 7996, -10776)])
 
 [node name="main" type="Node2D"]
 metadata/_edit_lock_ = true
@@ -30,7 +36,8 @@ scale = Vector2(31.4906, 5.20647)
 position = Vector2(4108, -2864)
 
 [node name="Camera2D" type="Camera2D" parent="Bob"]
-scale = Vector2(2.16982, 1.66671)
+scale = Vector2(4.60418, 6.17908)
+zoom = Vector2(0.12, 0.12)
 position_smoothing_enabled = true
 
 [node name="Left" type="StaticBody2D" parent="."]
@@ -70,5 +77,21 @@ rotation = 2.96166
 scale = Vector2(10.2022, 5.59372)
 
 [node name="Node2D5" parent="." instance=ExtResource("5_rgsn1")]
-position = Vector2(5275, -7162)
-scale = Vector2(54.1561, 16.8882)
+position = Vector2(5683, -7170)
+rotation = 0.252226
+scale = Vector2(71.5941, 16.5946)
+
+[node name="Node2D6" parent="." instance=ExtResource("5_rgsn1")]
+position = Vector2(1742, -7748)
+scale = Vector2(18.7877, 10.234)
+
+[node name="Node2D7" parent="." instance=ExtResource("3_tx4v1")]
+position = Vector2(3698, -10127)
+scale = Vector2(69.6506, 9.40496)
+
+[node name="Havfrue" parent="." instance=ExtResource("6_oojm2")]
+position = Vector2(8914, -9796)
+scale = Vector2(0.161939, 0.16067)
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+navigation_polygon = SubResource("NavigationPolygon_es6aw")

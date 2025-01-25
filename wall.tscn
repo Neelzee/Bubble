@@ -7,7 +7,7 @@ size = Vector2(94.0266, 116.925)
 
 [node name="Node2D" type="Node2D"]
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D" type="StaticBody2D" parent="."]
 
 [node name="Icon" type="Sprite2D" parent="Area2D"]
 texture = ExtResource("1_tds1h")
