@@ -10,8 +10,8 @@
 
 ## TODO:
 
-- [ ] Pufferfish
-    - [ ] Move side-to-side
+- [x] Pufferfish
+    - [x] Move side-to-side
     - [ ] Move towards player
 - [ ] Environment
     - [ ] Coral Reef
