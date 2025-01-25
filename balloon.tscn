@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://crp0174umumju"]
+
+[ext_resource type="Script" path="res://Pufferfish.cs" id="1_26w2x"]
+[ext_resource type="Texture2D" uid="uid://bpj4vlumt5dnq" path="res://ballong med spikeball.png" id="2_fhqag"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_oegj8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_fhqag")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1jwcb"]
+radius = 18.0278
+
+[node name="Balloon" type="CharacterBody2D"]
+script = ExtResource("1_26w2x")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(1, -124)
+scale = Vector2(0.200001, 0.200001)
+sprite_frames = SubResource("SpriteFrames_oegj8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_1jwcb")

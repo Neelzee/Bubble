@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bt35ihnvfv4ek"
+path="res://.godot/imported/underwater theme.wav-a4da0dd5b518b868352dcaeba6c0ed39.sample"
+
+[deps]
+
+source_file="res://underwater theme.wav"
+dest_files=["res://.godot/imported/underwater theme.wav-a4da0dd5b518b868352dcaeba6c0ed39.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
