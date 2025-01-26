@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://cvmn786ph3rxh"]
+
+[ext_resource type="Texture2D" uid="uid://t36xdy3bwnla" path="res://asset_2/korall lilla1.png" id="1_vp22c"]
+
+[node name="koralllilla1" type="StaticBody2D"]
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-143, 57, -125, -135, 136, -124, 144, 84, 57, 166)
+
+[node name="KorallLilla1" type="Sprite2D" parent="."]
+position = Vector2(3, 2)
+texture = ExtResource("1_vp22c")
