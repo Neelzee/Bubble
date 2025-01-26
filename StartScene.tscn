@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://b8bfuvw5delpi"]
+[gd_scene load_steps=6 format=3 uid="uid://b8bfuvw5delpi"]
 
 [ext_resource type="Script" path="res://Titlescreen.gd" id="1_kbc16"]
-[ext_resource type="Texture2D" uid="uid://diymtphhnl2bq" path="res://assets/to the moon and back.png" id="1_mqkh2"]
+[ext_resource type="Texture2D" uid="uid://cml00o2oqdv4" path="res://assets/to the moon and back.png" id="1_mqkh2"]
 [ext_resource type="PackedScene" uid="uid://b8lu2tqniofbn" path="res://pufferfish.tscn" id="2_x4n2c"]
 [ext_resource type="PackedScene" uid="uid://crp0174umumju" path="res://balloon.tscn" id="4_xf0yb"]
+[ext_resource type="AudioStream" uid="uid://bt35ihnvfv4ek" path="res://assets/underwater theme.wav" id="5_py17o"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -48,5 +49,10 @@ scale = Vector2(0.5, 0.5)
 [node name="Balloon2" parent="." instance=ExtResource("4_xf0yb")]
 position = Vector2(1073, 259)
 scale = Vector2(0.5, 0.5)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_py17o")
+autoplay = true
+max_distance = 1e+13
 
 [connection signal="pressed" from="StartButton" to="StartButton" method="_on_pressed"]

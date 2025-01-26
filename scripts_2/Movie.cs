@@ -14,7 +14,7 @@ public partial class Movie : VideoStreamPlayer
 	{
 		if (!this.IsPlaying())
 		{
-			GetTree().ChangeSceneToFile("res://StartScene.tscn");
+			GetTree().ChangeSceneToFile("res://main/main.tscn");
 		}
 	}
 }
