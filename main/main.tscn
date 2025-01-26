@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://css3rc35wdmhx"]
+[gd_scene load_steps=29 format=3 uid="uid://css3rc35wdmhx"]
 
 [ext_resource type="Texture2D" uid="uid://ckol7te2v2hji" path="res://foobar/asset_2/Game level/half bottom.PNG" id="1_5saaq"]
 [ext_resource type="PackedScene" uid="uid://b8lu2tqniofbn" path="res://pufferfish.tscn" id="1_jdi0p"]
@@ -38,12 +38,37 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kll5y"]
+radius = 516.0
+height = 1634.28
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xhhjd"]
+radius = 302.867
+height = 1434.39
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dsm26"]
+radius = 343.039
+height = 1415.37
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5lrns"]
+radius = 336.766
+height = 1231.7
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_f5goj"]
+radius = 380.25
+height = 1720.23
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0p5wc"]
+radius = 393.922
+height = 1590.0
+
 [node name="main" type="Node"]
 
 [node name="background" type="Sprite2D" parent="."]
 position = Vector2(5245, -36914)
 scale = Vector2(9.88, 13.68)
 texture = ExtResource("1_5saaq")
+metadata/_edit_lock_ = true
 
 [node name="HalfTop" type="Sprite2D" parent="."]
 position = Vector2(5042, -78049)
@@ -242,8 +267,8 @@ TopSpeed = 6000.0
 position = Vector2(142, -69668)
 scale = Vector2(5, 5)
 Frames = SubResource("SpriteFrames_hfehh")
-WarningTime = 4.0
-Distance = 1400
+WarningTime = 2.0
+Distance = 1300
 Speed = 750.0
 TopSpeed = 6000.0
 
@@ -252,8 +277,8 @@ position = Vector2(9768, -69320)
 scale = Vector2(5, 5)
 IsGoingRight = false
 Frames = SubResource("SpriteFrames_hfehh")
-WarningTime = 4.0
-Distance = 1400
+WarningTime = 2.0
+Distance = 1300
 Speed = 750.0
 TopSpeed = 6000.0
 
@@ -261,8 +286,8 @@ TopSpeed = 6000.0
 position = Vector2(91, -68449)
 scale = Vector2(5, 5)
 Frames = SubResource("SpriteFrames_hfehh")
-WarningTime = 4.0
-Distance = 1000
+WarningTime = 2.0
+Distance = 1300
 Speed = 750.0
 TopSpeed = 6000.0
 
@@ -271,8 +296,8 @@ position = Vector2(9717, -68101)
 scale = Vector2(5, 5)
 IsGoingRight = false
 Frames = SubResource("SpriteFrames_hfehh")
-WarningTime = 4.0
-Distance = 1000
+WarningTime = 2.0
+Distance = 1300
 Speed = 750.0
 TopSpeed = 6000.0
 
@@ -281,8 +306,8 @@ position = Vector2(9948, -72698)
 scale = Vector2(5, 5)
 IsGoingRight = false
 Frames = SubResource("SpriteFrames_hfehh")
-WarningTime = 4.0
-Distance = 1400
+WarningTime = 2.0
+Distance = 1300
 Speed = 750.0
 TopSpeed = 6000.0
 
@@ -979,3 +1004,121 @@ texture = ExtResource("17_w0sfo")
 position = Vector2(8127, -8046)
 scale = Vector2(2, 2)
 texture = ExtResource("11_puh3k")
+
+[node name="Cloud" type="Node" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Cloud"]
+position = Vector2(5306, -47452)
+collision_layer = 2
+collision_mask = 0
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cloud/StaticBody2D"]
+position = Vector2(36, 8)
+rotation = -1.86302
+shape = SubResource("CapsuleShape2D_kll5y")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Cloud"]
+position = Vector2(1628, -52905)
+collision_layer = 2
+collision_mask = 0
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cloud/StaticBody2D2"]
+position = Vector2(-100, -167)
+rotation = 1.3555
+shape = SubResource("CapsuleShape2D_xhhjd")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Cloud"]
+position = Vector2(8499, -54007)
+collision_layer = 2
+collision_mask = 0
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cloud/StaticBody2D3"]
+position = Vector2(-100, -167)
+rotation = 1.3555
+shape = SubResource("CapsuleShape2D_xhhjd")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="Cloud"]
+position = Vector2(5316, -57410)
+collision_layer = 2
+collision_mask = 0
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cloud/StaticBody2D4"]
+rotation = 1.56509
+shape = SubResource("CapsuleShape2D_dsm26")
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="Cloud"]
+position = Vector2(7869, -60686)
+collision_layer = 2
+collision_mask = 0
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cloud/StaticBody2D5"]
+rotation = 1.56509
+shape = SubResource("CapsuleShape2D_dsm26")
+
+[node name="StaticBody2D6" type="StaticBody2D" parent="Cloud"]
+position = Vector2(3767, -63747)
+collision_layer = 2
+collision_mask = 0
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cloud/StaticBody2D6"]
+rotation = 1.56509
+shape = SubResource("CapsuleShape2D_dsm26")
+
+[node name="StaticBody2D7" type="StaticBody2D" parent="Cloud"]
+collision_layer = 2
+collision_mask = 0
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cloud/StaticBody2D7"]
+position = Vector2(1528, -61239)
+rotation = 1.52726
+shape = SubResource("CapsuleShape2D_5lrns")
+
+[node name="StaticBody2D8" type="StaticBody2D" parent="Cloud"]
+position = Vector2(7015, -3847)
+collision_layer = 2
+collision_mask = 0
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cloud/StaticBody2D8"]
+position = Vector2(1528, -61239)
+rotation = 1.52726
+shape = SubResource("CapsuleShape2D_5lrns")
+
+[node name="StaticBody2D9" type="StaticBody2D" parent="Cloud"]
+position = Vector2(1885, -66612)
+collision_layer = 2
+collision_mask = 0
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cloud/StaticBody2D9"]
+rotation = 1.56509
+shape = SubResource("CapsuleShape2D_dsm26")
+
+[node name="StaticBody2D10" type="StaticBody2D" parent="Cloud"]
+position = Vector2(3071, -71242)
+collision_layer = 2
+collision_mask = 0
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cloud/StaticBody2D10"]
+position = Vector2(54, 50)
+rotation = 1.39255
+shape = SubResource("CapsuleShape2D_f5goj")
+
+[node name="StaticBody2D11" type="StaticBody2D" parent="Cloud"]
+position = Vector2(7459, -70468)
+rotation = 1.39892
+collision_layer = 2
+collision_mask = 0
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cloud/StaticBody2D11"]
+position = Vector2(-24.0773, -282.277)
+shape = SubResource("CapsuleShape2D_0p5wc")
