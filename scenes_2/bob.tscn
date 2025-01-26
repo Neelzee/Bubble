@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dflilq44r4bpa"]
+[gd_scene load_steps=15 format=3 uid="uid://dflilq44r4bpa"]
 
 [ext_resource type="Script" path="res://scripts_2/BobMovement3.cs" id="2_0iqe3"]
 [ext_resource type="AudioStream" uid="uid://b0ng1a4vcpw2o" path="res://asset_2/sound effects/Walking3-cut.mp3" id="2_gk4ly"]
@@ -8,7 +8,9 @@
 [ext_resource type="Texture2D" uid="uid://dolvxywgv3slb" path="res://assets/Bob the bubble/bob blow hard.png" id="4_j3e7q"]
 [ext_resource type="AudioStream" uid="uid://bt35ihnvfv4ek" path="res://assets/underwater theme.wav" id="4_v5sie"]
 [ext_resource type="Texture2D" uid="uid://sekitwg8hqg" path="res://assets/Bob the bubble/bubble base.png" id="5_4nb5j"]
+[ext_resource type="Texture2D" uid="uid://cimwekiy88heb" path="res://assets/Bob the bubble/bob in love.png" id="5_ltal4"]
 [ext_resource type="Texture2D" uid="uid://ylp8go7b3clc" path="res://assets/Bob the bubble/bob neutral.png" id="6_4wprp"]
+[ext_resource type="Texture2D" uid="uid://brofl8vwoowr5" path="res://assets/Bob the bubble/bob dead.png" id="6_av1eh"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_x4p8y"]
 radius = 35.0143
@@ -26,7 +28,10 @@ Speed = 900.0
 radiusMax = 1000
 radiusFace = 300
 radiusMin = 100
-faces = Array[Texture2D]([ExtResource("6_4wprp"), ExtResource("3_6uasc"), ExtResource("4_j3e7q")])
+skyLimit = -7000.0
+victoryLimit = -7000.0
+deathTime = 5000
+faces = Array[Texture2D]([ExtResource("6_4wprp"), ExtResource("3_6uasc"), ExtResource("4_j3e7q"), ExtResource("5_ltal4"), ExtResource("6_av1eh")])
 walkingSound = NodePath("WalkingSound")
 walkingStrong = ExtResource("2_gk4ly")
 walkingWeak = ExtResource("4_f1dib")

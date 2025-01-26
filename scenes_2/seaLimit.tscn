@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://duikfk00yhj74"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_2rtxc"]
+
+[node name="SeaLimit" type="Area2D"]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(100, -0.391)
+shape = SubResource("SegmentShape2D_2rtxc")
