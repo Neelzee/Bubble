@@ -24,7 +24,9 @@ func _physics_process(delta: float) -> void:
 	
 	direction = nav.get_next_path_position() - global_position  
 	if direction.length()>50:#Hvis havfruen er langt nok unna målet (ikke spinning)
-		look_at(nav.get_next_path_position())	
+		var angle_to_player
+		angle_to_player = global_position.direction_to(player).angle()
+		rotation = move_toward(rotation, angle_to_player, delta)
 
 	direction = direction.normalized()
 	

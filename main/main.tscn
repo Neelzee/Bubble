@@ -1,12 +1,11 @@
 [gd_scene load_steps=23 format=3 uid="uid://css3rc35wdmhx"]
 
-
 [ext_resource type="Texture2D" uid="uid://ckol7te2v2hji" path="res://foobar/asset_2/Game level/half bottom.PNG" id="1_5saaq"]
 [ext_resource type="PackedScene" uid="uid://b8lu2tqniofbn" path="res://pufferfish.tscn" id="1_jdi0p"]
 [ext_resource type="Texture2D" uid="uid://ceq42w6tul2wp" path="res://foobar/asset_2/Game level/half top.PNG" id="1_kno5u"]
-[ext_resource type="PackedScene" uid="uid://dflilq44r4bpa" path="res://scenes_2/bob.tscn" id="3_v65g0"]
+[ext_resource type="PackedScene" uid="uid://dflilq44r4bpa" path="res://scenes_2/bob.tscn" id="3_nrfey"]
 [ext_resource type="PackedScene" uid="uid://be8bcjwydtfk7" path="res://attack/side_attack.tscn" id="6_some8"]
-[ext_resource type="Texture2D" uid="uid://3wo68k7egvll" path="res://asset_2/måke høyre.png" id="7_6q4n7"]
+[ext_resource type="Texture2D" uid="uid://bkdow8rqa36l" path="res://asset_2/flying shark.png" id="7_j47j6"]
 [ext_resource type="PackedScene" uid="uid://bv5admfsgidhw" path="res://terrain/korallrev2.tscn" id="8_axu0i"]
 [ext_resource type="Texture2D" uid="uid://ope0hhn7w3vb" path="res://asset_2/sjøgress2.png" id="9_xevsd"]
 [ext_resource type="Texture2D" uid="uid://b4qv75jr8ab24" path="res://asset_2/sjøgress3.png" id="10_66nvx"]
@@ -15,7 +14,6 @@
 [ext_resource type="Texture2D" uid="uid://bst5pjhuixgcu" path="res://asset_2/sjøgress 1.png" id="11_puh3k"]
 [ext_resource type="PackedScene" uid="uid://uyndkcyn2j1y" path="res://korall/korallgul_2.tscn" id="12_vygqt"]
 [ext_resource type="PackedScene" uid="uid://cvmn786ph3rxh" path="res://korall/koralllilla_1.tscn" id="13_1rr1f"]
-[ext_resource type="Texture2D" uid="uid://bwhf3leo48dn7" path="res://asset_2/korallrev1.png" id="13_w035n"]
 [ext_resource type="PackedScene" uid="uid://d3east7xnktlx" path="res://korall/koralllilla_2.tscn" id="14_v8anc"]
 [ext_resource type="PackedScene" uid="uid://bbhhgsmeq0mn6" path="res://havfrue/havfrue.tscn" id="15_d4biy"]
 [ext_resource type="PackedScene" uid="uid://crp0174umumju" path="res://balloon.tscn" id="16_1pk5d"]
@@ -25,15 +23,15 @@
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_tr3ji"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_mwysg"]
-vertices = PackedVector2Array(1860.47, -26887.9, 1742.18, -26226.3, 452.07, -27934.2, 1134.09, -28040.3, 486.797, -29579.4, 2115.33, -28629.1, 8444.48, -29932.5, 4484.91, -28579.9, 7746.83, -26587.2, 9411.81, -27288.6, 9144.26, -37084.1, 8372.55, -31398.3, 731, -37136.9, 733.992, -31963.3)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(3, 2, 4, 5), PackedInt32Array(5, 4, 6, 7), PackedInt32Array(8, 7, 6, 9), PackedInt32Array(10, 9, 6, 11), PackedInt32Array(12, 10, 11, 13)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(2118, -28619, 1148, -28037, 1871, -26890, 1748, -26202, 442, -27931, 477, -29589, 8434, -29942, 8363, -31389, 724, -31954, 721, -37147, 9154, -37094, 9422, -27282, 7746, -26576, 4482, -28570)])
+vertices = PackedVector2Array(1860.36, -26887.3, 1742.18, -26226.3, 452.281, -27934, 1003.49, -27967.9, 638.203, -30107.3, 857.25, -28978.4, 7766.8, -30371.2, 4485.31, -28579.7, 7747.03, -26587.1, 9914.05, -27403.9, 733.992, -31963.3, 731, -37136.7, 9985.92, -36833.3, 8379.89, -31397.8)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(3, 2, 4, 5), PackedInt32Array(5, 4, 6, 7), PackedInt32Array(8, 7, 6, 9), PackedInt32Array(10, 11, 12, 13), PackedInt32Array(13, 12, 9), PackedInt32Array(13, 9, 6)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(869, -28967, 1013, -27972, 1871, -26890, 1748, -26202, 442, -27931, 629, -30117, 7761, -30381, 8363, -31389, 724, -31954, 721, -37147, 9996, -36843, 9924, -27397, 7746, -26576, 4482, -28570)])
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_hfehh"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("7_6q4n7")
+"texture": ExtResource("7_j47j6")
 }],
 "loop": true,
 "name": &"default",
@@ -42,27 +40,26 @@ animations = [{
 
 [node name="main" type="Node"]
 
+[node name="background" type="Sprite2D" parent="."]
+position = Vector2(5245, -36914)
+scale = Vector2(9.88, 13.68)
+texture = ExtResource("1_5saaq")
+
 [node name="HalfTop" type="Sprite2D" parent="."]
 position = Vector2(5042, -78049)
 scale = Vector2(9.54428, 10.4394)
 texture = ExtResource("1_kno5u")
 metadata/_edit_lock_ = true
 
-[node name="background" type="Sprite2D" parent="."]
-position = Vector2(4978, -36531)
-scale = Vector2(9.44076, 13.5999)
-texture = ExtResource("1_5saaq")
-metadata/_edit_lock_ = true
+[node name="bob" parent="." instance=ExtResource("3_nrfey")]
+position = Vector2(7533, -953)
+scale = Vector2(4, 4)
+skyLimit = -38147.0
+victoryLimit = -102976.0
 
-position = Vector2(6873, -837.002)
-scale = Vector2(5, 5)
-skyLimit = -38000.0
-victoryLimit = -103056.0
-
-[node name="Camera2D" type="Camera2D" parent="bob"]
-position = Vector2(4.40012, 4.59999)
-scale = Vector2(5, 5)
-
+[node name="bob#Camera2D" type="Camera2D" parent="bob"]
+position = Vector2(2.25001, 4)
+scale = Vector2(1.25, 1.25)
 zoom = Vector2(0.12, 0.12)
 limit_left = 0
 limit_top = -106083
@@ -111,12 +108,12 @@ shape = SubResource("WorldBoundaryShape2D_tr3ji")
 
 [node name="Havfrue" type="Node" parent="Enemies"]
 
-[node name="Havfrue" parent="Enemies/Havfrue" instance=ExtResource("15_d4biy")]
-position = Vector2(5454, -31569)
-scale = Vector2(0.025, 0.025)
-
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="Enemies/Havfrue"]
 navigation_polygon = SubResource("NavigationPolygon_mwysg")
+
+[node name="Havfrue2" parent="Enemies/Havfrue" instance=ExtResource("15_d4biy")]
+position = Vector2(8723, -30881)
+scale = Vector2(0.029306, 0.0336567)
 
 [node name="Pufferfish" type="Node" parent="Enemies"]
 
@@ -241,6 +238,54 @@ Distance = 1400
 Speed = 750.0
 TopSpeed = 6000.0
 
+[node name="sideAttack6" parent="Enemies/SideAttack" instance=ExtResource("6_some8")]
+position = Vector2(142, -69668)
+scale = Vector2(5, 5)
+Frames = SubResource("SpriteFrames_hfehh")
+WarningTime = 4.0
+Distance = 1400
+Speed = 750.0
+TopSpeed = 6000.0
+
+[node name="sideAttack7" parent="Enemies/SideAttack" instance=ExtResource("6_some8")]
+position = Vector2(9768, -69320)
+scale = Vector2(5, 5)
+IsGoingRight = false
+Frames = SubResource("SpriteFrames_hfehh")
+WarningTime = 4.0
+Distance = 1400
+Speed = 750.0
+TopSpeed = 6000.0
+
+[node name="sideAttack8" parent="Enemies/SideAttack" instance=ExtResource("6_some8")]
+position = Vector2(91, -68449)
+scale = Vector2(5, 5)
+Frames = SubResource("SpriteFrames_hfehh")
+WarningTime = 4.0
+Distance = 1000
+Speed = 750.0
+TopSpeed = 6000.0
+
+[node name="sideAttack9" parent="Enemies/SideAttack" instance=ExtResource("6_some8")]
+position = Vector2(9717, -68101)
+scale = Vector2(5, 5)
+IsGoingRight = false
+Frames = SubResource("SpriteFrames_hfehh")
+WarningTime = 4.0
+Distance = 1000
+Speed = 750.0
+TopSpeed = 6000.0
+
+[node name="sideAttack10" parent="Enemies/SideAttack" instance=ExtResource("6_some8")]
+position = Vector2(9948, -72698)
+scale = Vector2(5, 5)
+IsGoingRight = false
+Frames = SubResource("SpriteFrames_hfehh")
+WarningTime = 4.0
+Distance = 1400
+Speed = 750.0
+TopSpeed = 6000.0
+
 [node name="Ballon" type="Node" parent="Enemies"]
 
 [node name="Balloon" parent="Enemies/Ballon" instance=ExtResource("16_1pk5d")]
@@ -284,14 +329,132 @@ scale = Vector2(3, 3)
 Distance = 1000.0
 Speed = 300.0
 TopSpeed = 450.0
-[node name="Havfrue" parent="Enemies/Havfrue" instance=ExtResource("15_d4biy")]
-position = Vector2(8723, -30881)
-scale = Vector2(0.029306, 0.0336567)
 
-[node name="NavigationRegion2D" type="NavigationRegion2D" parent="Enemies/Havfrue"]
-position = Vector2(49, -374)
-navigation_polygon = SubResource("NavigationPolygon_mwysg")
-use_edge_connections = false
+[node name="Balloon7" parent="Enemies/Ballon" instance=ExtResource("16_1pk5d")]
+position = Vector2(3445, -46651)
+scale = Vector2(3, 3)
+Distance = 1000.0
+Speed = 350.0
+TopSpeed = 450.0
+
+[node name="Balloon8" parent="Enemies/Ballon" instance=ExtResource("16_1pk5d")]
+position = Vector2(1352, -47164)
+scale = Vector2(3, 3)
+Distance = 1000.0
+Speed = 400.0
+TopSpeed = 450.0
+
+[node name="Balloon9" parent="Enemies/Ballon" instance=ExtResource("16_1pk5d")]
+position = Vector2(2438, -47838)
+scale = Vector2(3, 3)
+Distance = 1000.0
+Speed = 300.0
+TopSpeed = 450.0
+
+[node name="Balloon10" parent="Enemies/Ballon" instance=ExtResource("16_1pk5d")]
+position = Vector2(6395, -48278)
+scale = Vector2(3, 3)
+Distance = 1000.0
+Speed = 300.0
+TopSpeed = 450.0
+
+[node name="Balloon11" parent="Enemies/Ballon" instance=ExtResource("16_1pk5d")]
+position = Vector2(4302, -48791)
+scale = Vector2(3, 3)
+Distance = 1000.0
+Speed = 400.0
+TopSpeed = 450.0
+
+[node name="Balloon12" parent="Enemies/Ballon" instance=ExtResource("16_1pk5d")]
+position = Vector2(5388, -49465)
+scale = Vector2(3, 3)
+Distance = 1000.0
+Speed = 300.0
+TopSpeed = 450.0
+
+[node name="Balloon13" parent="Enemies/Ballon" instance=ExtResource("16_1pk5d")]
+position = Vector2(6138, -55336)
+scale = Vector2(3, 3)
+Distance = 1000.0
+Speed = 300.0
+TopSpeed = 450.0
+
+[node name="Balloon14" parent="Enemies/Ballon" instance=ExtResource("16_1pk5d")]
+position = Vector2(4045, -55849)
+scale = Vector2(3, 3)
+Distance = 1000.0
+Speed = 400.0
+TopSpeed = 450.0
+
+[node name="Balloon15" parent="Enemies/Ballon" instance=ExtResource("16_1pk5d")]
+position = Vector2(5131, -56523)
+scale = Vector2(3, 3)
+Distance = 1000.0
+Speed = 300.0
+TopSpeed = 450.0
+
+[node name="Balloon16" parent="Enemies/Ballon" instance=ExtResource("16_1pk5d")]
+position = Vector2(9088, -56963)
+scale = Vector2(3, 3)
+Distance = 1000.0
+Speed = 300.0
+TopSpeed = 450.0
+
+[node name="Balloon17" parent="Enemies/Ballon" instance=ExtResource("16_1pk5d")]
+position = Vector2(6995, -57476)
+scale = Vector2(3, 3)
+Distance = 1000.0
+Speed = 400.0
+TopSpeed = 450.0
+
+[node name="Balloon18" parent="Enemies/Ballon" instance=ExtResource("16_1pk5d")]
+position = Vector2(8081, -58150)
+scale = Vector2(3, 3)
+Distance = 1000.0
+Speed = 300.0
+TopSpeed = 450.0
+
+[node name="Balloon19" parent="Enemies/Ballon" instance=ExtResource("16_1pk5d")]
+position = Vector2(4054, -62102)
+scale = Vector2(3, 3)
+Distance = 1000.0
+Speed = 350.0
+TopSpeed = 450.0
+
+[node name="Balloon20" parent="Enemies/Ballon" instance=ExtResource("16_1pk5d")]
+position = Vector2(1961, -62615)
+scale = Vector2(3, 3)
+Distance = 1000.0
+Speed = 400.0
+TopSpeed = 450.0
+
+[node name="Balloon21" parent="Enemies/Ballon" instance=ExtResource("16_1pk5d")]
+position = Vector2(3047, -63289)
+scale = Vector2(3, 3)
+Distance = 1000.0
+Speed = 300.0
+TopSpeed = 450.0
+
+[node name="Balloon22" parent="Enemies/Ballon" instance=ExtResource("16_1pk5d")]
+position = Vector2(7004, -63729)
+scale = Vector2(3, 3)
+Distance = 1000.0
+Speed = 300.0
+TopSpeed = 450.0
+
+[node name="Balloon23" parent="Enemies/Ballon" instance=ExtResource("16_1pk5d")]
+position = Vector2(4911, -64242)
+scale = Vector2(3, 3)
+Distance = 1000.0
+Speed = 400.0
+TopSpeed = 450.0
+
+[node name="Balloon24" parent="Enemies/Ballon" instance=ExtResource("16_1pk5d")]
+position = Vector2(5997, -64916)
+scale = Vector2(3, 3)
+Distance = 1000.0
+Speed = 300.0
+TopSpeed = 450.0
 
 [node name="Terrain" type="Node" parent="."]
 
@@ -640,27 +803,24 @@ rotation = 0.587463
 position = Vector2(7612, -18646)
 rotation = 1.37907
 
-[node name="Korallrev1" type="Sprite2D" parent="Coral"]
-position = Vector2(8833, -25804)
-rotation = 3.40339
-scale = Vector2(4.92475, 4.40917)
-texture = ExtResource("13_w035n")
-
-[node name="Korallrev2" type="Sprite2D" parent="Coral"]
-position = Vector2(4890.39, -26412.6)
-rotation = 0.261799
-scale = Vector2(3.79709, 4.02483)
-texture = ExtResource("13_w035n")
-
-[node name="Korallrev3" type="Sprite2D" parent="Coral"]
-position = Vector2(2753.39, -27015.6)
-rotation = 0.261799
-scale = Vector2(-2.98654, 4.50785)
-texture = ExtResource("13_w035n")
+[node name="korallrev1" parent="Coral" instance=ExtResource("10_fxxy8")]
+position = Vector2(5023, -26303)
+rotation = 0.392997
+scale = Vector2(4.2881, 3.89717)
 
 [node name="korallrev2" parent="Coral" instance=ExtResource("8_axu0i")]
 position = Vector2(810, -29818)
 scale = Vector2(12.3699, 3.24892)
+
+[node name="korallrev3" parent="Coral" instance=ExtResource("10_fxxy8")]
+position = Vector2(2916, -27089)
+rotation = 0.392997
+scale = Vector2(-4.288, 3.897)
+
+[node name="korallrev4" parent="Coral" instance=ExtResource("10_fxxy8")]
+position = Vector2(8812, -25527)
+rotation = 3.08364
+scale = Vector2(4.2881, 3.89717)
 
 [node name="Foreground" type="Node" parent="."]
 

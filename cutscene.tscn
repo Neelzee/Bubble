@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://c3fpcm55y8dux"]
+
+[ext_resource type="VideoStream" path="res://cutscenes/intro cutscene.ogv" id="1_q1s5w"]
+
+[node name="Node2D" type="VideoStreamPlayer"]
+scale = Vector2(3.43072, -2.7478)
+stream = ExtResource("1_q1s5w")
+autoplay = true

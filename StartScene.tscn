@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://b8bfuvw5delpi"]
+[gd_scene load_steps=3 format=3 uid="uid://b8bfuvw5delpi"]
 
 [ext_resource type="Script" path="res://Titlescreen.gd" id="1_kbc16"]
+[ext_resource type="PackedScene" uid="uid://b8lu2tqniofbn" path="res://pufferfish.tscn" id="2_x4n2c"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -19,5 +20,16 @@ offset_bottom = 370.0
 scale = Vector2(6.33252, 3.98166)
 text = "Start"
 script = ExtResource("1_kbc16")
+
+[node name="pufferfish2" parent="." instance=ExtResource("2_x4n2c")]
+position = Vector2(773, 533)
+Speed = 500.0
+TopSpeed = 550.0
+
+[node name="pufferfish" parent="." instance=ExtResource("2_x4n2c")]
+position = Vector2(338, 217)
+Distance = 300.0
+Speed = 400.0
+TopSpeed = 350.0
 
 [connection signal="pressed" from="StartButton" to="StartButton" method="_on_pressed"]
