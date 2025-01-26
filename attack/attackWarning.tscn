@@ -1,12 +1,12 @@
 [gd_scene load_steps=3 format=3 uid="uid://dtxa6c2kjc1ha"]
 
-[ext_resource type="Texture2D" uid="uid://j85gdo67pm1c" path="res://attack/warning.png" id="1_drin3"]
+[ext_resource type="Texture2D" uid="uid://cmfb2lv8d1yow" path="res://assets/warning.png" id="1_x02eq"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_57g5l"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_drin3")
+"texture": ExtResource("1_x02eq")
 }],
 "loop": true,
 "name": &"default",
@@ -14,5 +14,6 @@ animations = [{
 }]
 
 [node name="AttackWarning" type="AnimatedSprite2D"]
+z_index = 10
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_57g5l")

@@ -38,7 +38,7 @@ texture = ExtResource("1_5saaq")
 metadata/_edit_lock_ = true
 
 [node name="bob" parent="." instance=ExtResource("3_v65g0")]
-position = Vector2(4856, -37946)
+position = Vector2(7018, -739)
 scale = Vector2(5, 5)
 skyLimit = -38000.0
 victoryLimit = -103056.0
@@ -192,6 +192,13 @@ scale = Vector2(10, 10)
 Distance = 500.0
 Speed = 310.0
 TopSpeed = 340.0
+
+[node name="pufferfish11" parent="Enemies" instance=ExtResource("1_jdi0p")]
+position = Vector2(5002, -14127)
+scale = Vector2(10, 10)
+Distance = 3750.0
+Speed = 300.0
+TopSpeed = 300.0
 
 [node name="Havfrue" type="Node" parent="Enemies"]
 

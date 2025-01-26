@@ -12,3 +12,4 @@ position = Vector2(-393, 0)
 
 [node name="AttackWarning" parent="." instance=ExtResource("2_2ss15")]
 position = Vector2(112, 0)
+scale = Vector2(0.28, 0.28)
