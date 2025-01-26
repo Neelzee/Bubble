@@ -1,10 +1,10 @@
-[gd_scene load_steps=17 format=3 uid="uid://dflilq44r4bpa"]
+[gd_scene load_steps=16 format=3 uid="uid://dflilq44r4bpa"]
 
 [ext_resource type="Script" path="res://scripts_2/BobMovement3.cs" id="2_0iqe3"]
 [ext_resource type="AudioStream" uid="uid://b0ng1a4vcpw2o" path="res://asset_2/sound effects/Walking3-cut.mp3" id="2_gk4ly"]
 [ext_resource type="Texture2D" uid="uid://cwvw3kx1a1g6s" path="res://assets/Bob the bubble/bob blow.png" id="3_6uasc"]
 [ext_resource type="Script" path="res://scripts_2/DeathBox.cs" id="3_aerp3"]
-[ext_resource type="AudioStream" uid="uid://cnk4fkdgbb0ae" path="res://asset_2/sound effects/Walking1_cut.mp3" id="4_f1dib"]
+[ext_resource type="Script" path="res://scenes_2/face.gd" id="4_04rqm"]
 [ext_resource type="Texture2D" uid="uid://cryiwrr3wqp13" path="res://assets/Bob the bubble/bob blow hard.png" id="4_j3e7q"]
 [ext_resource type="AudioStream" uid="uid://bt35ihnvfv4ek" path="res://foobar/assets/underwater theme.wav" id="4_v5sie"]
 [ext_resource type="Texture2D" uid="uid://s3ls64ae0ntc" path="res://assets/Bob the bubble/bubble base.png" id="5_4nb5j"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://cyud7jqp0u65l" path="res://assets/Bob the bubble/bob dead.png" id="6_av1eh"]
 [ext_resource type="Script" path="res://scenes_2/MusicController.cs" id="12_2u5l3"]
 [ext_resource type="AudioStream" uid="uid://j3v7amfy2hvd" path="res://assets/sky theme.wav" id="13_fjh4t"]
+[ext_resource type="AudioStream" uid="uid://b2cmwh3vlyvhi" path="res://asset_2/sound effects/Walking2_cut.mp3" id="8_fyn6y"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_x4p8y"]
 radius = 35.0143
@@ -29,13 +30,13 @@ script = ExtResource("2_0iqe3")
 Speed = 900.0
 radiusMax = 1000
 radiusMin = 100
-skyLimit = -12000.0
-victoryLimit = -15000.0
-deathTime = 2000
+skyLimit = -10000.0
+victoryLimit = -10000.0
+deathTime = 5000
 faces = Array[Texture2D]([ExtResource("6_4wprp"), ExtResource("3_6uasc"), ExtResource("4_j3e7q"), ExtResource("5_ltal4"), ExtResource("6_av1eh")])
 walkingSound = NodePath("WalkingSound")
 walkingStrong = ExtResource("2_gk4ly")
-walkingWeak = ExtResource("4_f1dib")
+walkingWeak = ExtResource("8_fyn6y")
 faceManager = NodePath("Face")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -48,6 +49,7 @@ texture = ExtResource("5_4nb5j")
 [node name="Face" type="Sprite2D" parent="."]
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("6_4wprp")
+script = ExtResource("4_04rqm")
 
 [node name="death_box" type="Area2D" parent="."]
 collision_layer = 0

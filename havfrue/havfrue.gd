@@ -23,7 +23,11 @@ func _physics_process(delta: float) -> void:
 	nav.target_position = player
 	
 	direction = nav.get_next_path_position() - global_position  
+	if direction.length()>50:#Hvis havfruen er langt nok unna målet (ikke spinning)
+		look_at(nav.get_next_path_position())	
+
 	direction = direction.normalized()
+	
 	velocity = velocity.lerp (direction * SPEED, ACCEL * delta)
 
 

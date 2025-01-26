@@ -1,5 +1,6 @@
 [gd_scene load_steps=23 format=3 uid="uid://css3rc35wdmhx"]
 
+
 [ext_resource type="Texture2D" uid="uid://ckol7te2v2hji" path="res://foobar/asset_2/Game level/half bottom.PNG" id="1_5saaq"]
 [ext_resource type="PackedScene" uid="uid://b8lu2tqniofbn" path="res://pufferfish.tscn" id="1_jdi0p"]
 [ext_resource type="Texture2D" uid="uid://ceq42w6tul2wp" path="res://foobar/asset_2/Game level/half top.PNG" id="1_kno5u"]
@@ -14,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://bst5pjhuixgcu" path="res://asset_2/sjøgress 1.png" id="11_puh3k"]
 [ext_resource type="PackedScene" uid="uid://uyndkcyn2j1y" path="res://korall/korallgul_2.tscn" id="12_vygqt"]
 [ext_resource type="PackedScene" uid="uid://cvmn786ph3rxh" path="res://korall/koralllilla_1.tscn" id="13_1rr1f"]
+[ext_resource type="Texture2D" uid="uid://bwhf3leo48dn7" path="res://asset_2/korallrev1.png" id="13_w035n"]
 [ext_resource type="PackedScene" uid="uid://d3east7xnktlx" path="res://korall/koralllilla_2.tscn" id="14_v8anc"]
 [ext_resource type="PackedScene" uid="uid://bbhhgsmeq0mn6" path="res://havfrue/havfrue.tscn" id="15_d4biy"]
 [ext_resource type="PackedScene" uid="uid://crp0174umumju" path="res://balloon.tscn" id="16_1pk5d"]
@@ -23,9 +25,9 @@
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_tr3ji"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_mwysg"]
-vertices = PackedVector2Array(9944.91, -27581.6, 46.9375, -28104.5, 7.04688, -34859, 9885.08, -34899)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(37, -28095, 9955, -27571, 9895, -34909, -3, -34869)])
+vertices = PackedVector2Array(1860.47, -26887.9, 1742.18, -26226.3, 452.07, -27934.2, 1134.09, -28040.3, 486.797, -29579.4, 2115.33, -28629.1, 8444.48, -29932.5, 4484.91, -28579.9, 7746.83, -26587.2, 9411.81, -27288.6, 9144.26, -37084.1, 8372.55, -31398.3, 731, -37136.9, 733.992, -31963.3)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(3, 2, 4, 5), PackedInt32Array(5, 4, 6, 7), PackedInt32Array(8, 7, 6, 9), PackedInt32Array(10, 9, 6, 11), PackedInt32Array(12, 10, 11, 13)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(2118, -28619, 1148, -28037, 1871, -26890, 1748, -26202, 442, -27931, 477, -29589, 8434, -29942, 8363, -31389, 724, -31954, 721, -37147, 9154, -37094, 9422, -27282, 7746, -26576, 4482, -28570)])
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_hfehh"]
 animations = [{
@@ -52,7 +54,6 @@ scale = Vector2(9.44076, 13.5999)
 texture = ExtResource("1_5saaq")
 metadata/_edit_lock_ = true
 
-[node name="bob" parent="." instance=ExtResource("3_v65g0")]
 position = Vector2(6873, -837.002)
 scale = Vector2(5, 5)
 skyLimit = -38000.0
@@ -61,6 +62,7 @@ victoryLimit = -103056.0
 [node name="Camera2D" type="Camera2D" parent="bob"]
 position = Vector2(4.40012, 4.59999)
 scale = Vector2(5, 5)
+
 zoom = Vector2(0.12, 0.12)
 limit_left = 0
 limit_top = -106083
@@ -282,6 +284,14 @@ scale = Vector2(3, 3)
 Distance = 1000.0
 Speed = 300.0
 TopSpeed = 450.0
+[node name="Havfrue" parent="Enemies/Havfrue" instance=ExtResource("15_d4biy")]
+position = Vector2(8723, -30881)
+scale = Vector2(0.029306, 0.0336567)
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="Enemies/Havfrue"]
+position = Vector2(49, -374)
+navigation_polygon = SubResource("NavigationPolygon_mwysg")
+use_edge_connections = false
 
 [node name="Terrain" type="Node" parent="."]
 
@@ -629,6 +639,28 @@ rotation = 0.587463
 [node name="koralllilla26" parent="Coral" instance=ExtResource("13_1rr1f")]
 position = Vector2(7612, -18646)
 rotation = 1.37907
+
+[node name="Korallrev1" type="Sprite2D" parent="Coral"]
+position = Vector2(8833, -25804)
+rotation = 3.40339
+scale = Vector2(4.92475, 4.40917)
+texture = ExtResource("13_w035n")
+
+[node name="Korallrev2" type="Sprite2D" parent="Coral"]
+position = Vector2(4890.39, -26412.6)
+rotation = 0.261799
+scale = Vector2(3.79709, 4.02483)
+texture = ExtResource("13_w035n")
+
+[node name="Korallrev3" type="Sprite2D" parent="Coral"]
+position = Vector2(2753.39, -27015.6)
+rotation = 0.261799
+scale = Vector2(-2.98654, 4.50785)
+texture = ExtResource("13_w035n")
+
+[node name="korallrev2" parent="Coral" instance=ExtResource("8_axu0i")]
+position = Vector2(810, -29818)
+scale = Vector2(12.3699, 3.24892)
 
 [node name="Foreground" type="Node" parent="."]
 
