@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cnk4fkdgbb0ae"
+path="res://.godot/imported/Walking1_cut.mp3-f434266add994dcf99e26b0839b67c05.mp3str"
+
+[deps]
+
+source_file="res://asset_2/sound effects/Walking1_cut.mp3"
+dest_files=["res://.godot/imported/Walking1_cut.mp3-f434266add994dcf99e26b0839b67c05.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

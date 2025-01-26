@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cwa1gs60w6lqy"
+path="res://.godot/imported/Bubbling.mp3-e0834653152c032e26ba2be0973c24ad.mp3str"
+
+[deps]
+
+source_file="res://asset_2/sound effects/sound effects/Bubbling.mp3"
+dest_files=["res://.godot/imported/Bubbling.mp3-e0834653152c032e26ba2be0973c24ad.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
