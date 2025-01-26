@@ -22,29 +22,24 @@ public partial class SideAttack : Node2D
 	{
 		_warningSprite = GetNode<AnimatedSprite2D>("./AttackWarning");
 		_attacker = GetNode<CharacterBody2D>("./AttackPattern");
-		_plr = GetNode<CharacterBody2D>("../bob");
+		_plr = GetNode<CharacterBody2D>("/root/main/bob");
 		if (_warningSprite == null || _attacker == null) throw new NullReferenceException(
 			"Couldn't find AttackWarning or AttackPattern"
 		);
 		_warningSprite.Visible = false;
-		_warningSprite.FlipH = !IsGoingRight;
+		_warningSprite.FlipV = !IsGoingRight;
 		var attackerSprite = _attacker.GetNode<AnimatedSprite2D>("AnimatedSprite2D");
 		if (Frames != null)
 		{
 			attackerSprite.SpriteFrames = Frames;
 		}
-		attackerSprite.FlipH = !IsGoingRight;
+		attackerSprite.FlipV = !IsGoingRight;
 		if (IsGoingRight) return;
-		_attacker.GlobalPosition = new Vector2(
-			_attacker.GlobalPosition.X + 1000,
-			_attacker.GlobalPosition.Y
-		);
-
+		RotationDegrees = 180;
 	}
 
 	private bool IsNear()
 	{
-		GD.Print("Distance: ", Math.Abs(_warningSprite.GlobalPosition.Y - _plr.GlobalPosition.Y));
 		return Math.Abs(_warningSprite.GlobalPosition.Y - _plr.GlobalPosition.Y) <= Distance;
 	}
 

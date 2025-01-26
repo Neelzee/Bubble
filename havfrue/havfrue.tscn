@@ -7,6 +7,8 @@
 size = Vector2(1.02556, 62.8561)
 
 [node name="Havfrue" type="CharacterBody2D"]
+collision_layer = 4
+collision_mask = 0
 motion_mode = 1
 wall_min_slide_angle = 0.0
 script = ExtResource("1_68ba6")

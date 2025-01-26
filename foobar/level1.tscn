@@ -1,0 +1,375 @@
+[gd_scene load_steps=18 format=3 uid="uid://cfcu1sjevups7"]
+
+[ext_resource type="Texture2D" uid="uid://btjsjjjaldx0h" path="res://asset_2/Game level/full map.PNG" id="1_f6kxn"]
+[ext_resource type="Texture2D" uid="uid://bjv8j1ho8wwtx" path="res://asset_2/sjøgress3.png" id="2_b88go"]
+[ext_resource type="Texture2D" uid="uid://bjs1653xr2q8y" path="res://asset_2/sjøgress 1.png" id="3_w31kb"]
+[ext_resource type="Texture2D" uid="uid://dyeeqvsr2buj3" path="res://asset_2/sjøgress2.png" id="4_kdhrc"]
+[ext_resource type="Texture2D" uid="uid://cohh3boxn38k5" path="res://asset_2/sjørøverskip.png" id="5_ksn3n"]
+[ext_resource type="Texture2D" uid="uid://3hjkyxok5kuo" path="res://asset_2/korallrev1.png" id="6_vd8tx"]
+[ext_resource type="Texture2D" uid="uid://b21kcx4qxk83l" path="res://asset_2/korall rev2.png" id="7_hv2j1"]
+[ext_resource type="Texture2D" uid="uid://df1bv3niklv0v" path="res://asset_2/korall gul1.png" id="8_jiwvm"]
+[ext_resource type="Texture2D" uid="uid://t8evfwd46fnl" path="res://asset_2/korall gul2.png" id="9_6wkcy"]
+[ext_resource type="Texture2D" uid="uid://dueqsl3o62c6a" path="res://asset_2/korall lilla1.png" id="10_rc31j"]
+[ext_resource type="Texture2D" uid="uid://bj5h1d371ydwx" path="res://asset_2/korall lilla 2.png" id="11_wqs7u"]
+[ext_resource type="Texture2D" uid="uid://bb132ev3w5a8k" path="res://assets/hai placeholder.png" id="12_cajvh"]
+[ext_resource type="Texture2D" uid="uid://b4mdgu8ndpqn5" path="res://assets/pufferfish first draft.png" id="13_jkomk"]
+[ext_resource type="Texture2D" uid="uid://d2sy82pub8kob" path="res://asset_2/scuffed mermaid.png" id="14_7t647"]
+[ext_resource type="Texture2D" uid="uid://bpj4vlumt5dnq" path="res://assets/ballong med spikeball.png" id="15_4rr8p"]
+[ext_resource type="Texture2D" uid="uid://btbjtop57n2e0" path="res://assets/anemone.png" id="16_o5eq5"]
+[ext_resource type="Texture2D" uid="uid://xqulpnutjxlg" path="res://asset_2/koral stang1.png" id="17_whwpo"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="FullMap" type="Sprite2D" parent="."]
+position = Vector2(4680, -29661)
+scale = Vector2(8.86458, 11.0344)
+texture = ExtResource("1_f6kxn")
+
+[node name="Sjøgress3" type="Sprite2D" parent="."]
+position = Vector2(2908, -6850)
+scale = Vector2(3.71307, 4.04686)
+texture = ExtResource("2_b88go")
+
+[node name="Sjøgress12" type="Sprite2D" parent="."]
+position = Vector2(7379.19, -14055.4)
+scale = Vector2(1, 1)
+texture = ExtResource("3_w31kb")
+
+[node name="Sjøgress14" type="Sprite2D" parent="."]
+position = Vector2(6498.19, -14053.4)
+scale = Vector2(1, 1)
+texture = ExtResource("4_kdhrc")
+
+[node name="Sjørøverskip" type="Sprite2D" parent="."]
+position = Vector2(6389, -14266)
+rotation = -0.685914
+scale = Vector2(3.24955, 3.12293)
+texture = ExtResource("5_ksn3n")
+
+[node name="Sjøgress13" type="Sprite2D" parent="Sjørøverskip"]
+position = Vector2(-755.004, -686.416)
+scale = Vector2(0.339559, 0.339558)
+texture = ExtResource("2_b88go")
+
+[node name="Sjøgress8" type="Sprite2D" parent="."]
+position = Vector2(9068, -2734)
+scale = Vector2(3.71307, 4.04686)
+texture = ExtResource("4_kdhrc")
+
+[node name="Sjøgress4" type="Sprite2D" parent="."]
+position = Vector2(4226, -6883)
+scale = Vector2(3.71307, 4.04686)
+texture = ExtResource("4_kdhrc")
+
+[node name="Sjøgress2" type="Sprite2D" parent="."]
+position = Vector2(874, -6933)
+scale = Vector2(3.71307, 4.04686)
+texture = ExtResource("4_kdhrc")
+
+[node name="Korallrev3" type="Sprite2D" parent="."]
+position = Vector2(-418, -21161)
+scale = Vector2(6.62037, 3.51637)
+texture = ExtResource("6_vd8tx")
+
+[node name="Korallrev2" type="Sprite2D" parent="."]
+position = Vector2(2812.33, -5525.23)
+scale = Vector2(7.37156, 3.54195)
+texture = ExtResource("6_vd8tx")
+
+[node name="KorallRev3" type="Sprite2D" parent="."]
+position = Vector2(8277.62, -10244.1)
+rotation = -0.172788
+scale = Vector2(5.45408, 5.15957)
+skew = 0.0228837
+texture = ExtResource("7_hv2j1")
+flip_h = true
+
+[node name="Sjøgress5" type="Sprite2D" parent="."]
+position = Vector2(5708, -12445)
+scale = Vector2(3.293, 3.589)
+texture = ExtResource("2_b88go")
+
+[node name="Sjøgress6" type="Sprite2D" parent="."]
+position = Vector2(6734, -12965)
+scale = Vector2(3.293, 3.589)
+texture = ExtResource("4_kdhrc")
+
+[node name="KorallGul3" type="Sprite2D" parent="."]
+position = Vector2(8291, -2939)
+scale = Vector2(3.71307, 4.04686)
+texture = ExtResource("8_jiwvm")
+
+[node name="KorallGul2" type="Sprite2D" parent="."]
+position = Vector2(5690, -6918)
+scale = Vector2(3.71307, 4.04686)
+texture = ExtResource("9_6wkcy")
+
+[node name="KorallRev2" type="Sprite2D" parent="."]
+position = Vector2(1721, -2163)
+scale = Vector2(3.71307, 4.04686)
+texture = ExtResource("7_hv2j1")
+
+[node name="Korallrev1" type="Sprite2D" parent="."]
+position = Vector2(8123, -1203)
+scale = Vector2(3.66447, 3.60539)
+texture = ExtResource("6_vd8tx")
+flip_h = true
+
+[node name="KorallLilla1" type="Sprite2D" parent="."]
+position = Vector2(7517, -12217)
+scale = Vector2(1.51626, 1.75397)
+texture = ExtResource("10_rc31j")
+
+[node name="KorallGul4" type="Sprite2D" parent="."]
+position = Vector2(7679.38, -1172.25)
+scale = Vector2(2.11308, 2.79265)
+texture = ExtResource("9_6wkcy")
+
+[node name="KorallLilla3" type="Sprite2D" parent="."]
+position = Vector2(1152.75, -4264)
+scale = Vector2(2.3916, 2.35979)
+texture = ExtResource("10_rc31j")
+
+[node name="Sjøgress9" type="Sprite2D" parent="."]
+position = Vector2(9148, -9845)
+rotation = -1.4556
+scale = Vector2(3.17011, 0.621159)
+texture = ExtResource("4_kdhrc")
+
+[node name="KorallLilla4" type="Sprite2D" parent="."]
+position = Vector2(3578, -7037)
+scale = Vector2(3.70596, 2.1164)
+texture = ExtResource("10_rc31j")
+
+[node name="KorallGul1" type="Sprite2D" parent="."]
+position = Vector2(3010.57, -4064.06)
+rotation = 0.190261
+scale = Vector2(3.31024, 3.50459)
+skew = -0.0714538
+texture = ExtResource("8_jiwvm")
+
+[node name="KorallGul5" type="Sprite2D" parent="."]
+position = Vector2(354, -6998.75)
+scale = Vector2(2.91389, 1.49302)
+texture = ExtResource("8_jiwvm")
+flip_h = true
+
+[node name="KorallGul6" type="Sprite2D" parent="."]
+position = Vector2(6497, -2608)
+scale = Vector2(4.45769, 2.40147)
+texture = ExtResource("9_6wkcy")
+
+[node name="KorallLilla8" type="Sprite2D" parent="."]
+position = Vector2(7602, -2706.25)
+scale = Vector2(1.80247, 1.73374)
+texture = ExtResource("11_wqs7u")
+
+[node name="Sjøgress1" type="Sprite2D" parent="."]
+position = Vector2(7052.5, -2417.5)
+scale = Vector2(2.31931, 1.67007)
+texture = ExtResource("3_w31kb")
+
+[node name="KorallLilla5" type="Sprite2D" parent="."]
+position = Vector2(8581.88, -2215.25)
+scale = Vector2(1.51694, 1.72355)
+texture = ExtResource("10_rc31j")
+
+[node name="KorallLilla6" type="Sprite2D" parent="."]
+position = Vector2(9186, -2218)
+texture = ExtResource("11_wqs7u")
+
+[node name="KorallLilla7" type="Sprite2D" parent="."]
+position = Vector2(1435, -1336)
+rotation = 0.958186
+scale = Vector2(1.75023, 1.30008)
+texture = ExtResource("10_rc31j")
+
+[node name="Sjøgress7" type="Sprite2D" parent="."]
+position = Vector2(1130, -893)
+rotation = 1.775
+scale = Vector2(5.14919, 0.680269)
+texture = ExtResource("4_kdhrc")
+
+[node name="Sjøgress10" type="Sprite2D" parent="."]
+position = Vector2(446, -3735)
+scale = Vector2(1.02723, 1.61565)
+texture = ExtResource("3_w31kb")
+
+[node name="Sjøgress11" type="Sprite2D" parent="."]
+position = Vector2(2678, -3689)
+scale = Vector2(1.43727, 1.3796)
+texture = ExtResource("4_kdhrc")
+
+[node name="KorallLilla9" type="Sprite2D" parent="."]
+position = Vector2(9091, -11035)
+scale = Vector2(2.3374, 0.952381)
+texture = ExtResource("10_rc31j")
+
+[node name="KorallGul7" type="Sprite2D" parent="."]
+position = Vector2(8499, -12866)
+scale = Vector2(2.75, 2.25419)
+texture = ExtResource("8_jiwvm")
+
+[node name="KorallGul8" type="Sprite2D" parent="."]
+position = Vector2(1177, -2460)
+rotation = 0.837758
+scale = Vector2(1.125, 1.25419)
+skew = -0.357792
+texture = ExtResource("8_jiwvm")
+
+[node name="Sjøgress13" type="Sprite2D" parent="."]
+position = Vector2(2740, -5394)
+texture = ExtResource("4_kdhrc")
+
+[node name="Sjøgress15" type="Sprite2D" parent="."]
+position = Vector2(3559, -5216)
+texture = ExtResource("2_b88go")
+
+[node name="Sjøgress16" type="Sprite2D" parent="."]
+position = Vector2(1317, -5299)
+texture = ExtResource("3_w31kb")
+
+[node name="Sjøgress17" type="Sprite2D" parent="."]
+position = Vector2(486, -5368)
+texture = ExtResource("2_b88go")
+
+[node name="KorallLilla10" type="Sprite2D" parent="."]
+position = Vector2(3228, -5447)
+scale = Vector2(2.4105, 0.739155)
+texture = ExtResource("11_wqs7u")
+
+[node name="KorallGul9" type="Sprite2D" parent="."]
+position = Vector2(1927, -5381)
+scale = Vector2(1.62615, 1)
+texture = ExtResource("9_6wkcy")
+
+[node name="Sjøgress18" type="Sprite2D" parent="."]
+position = Vector2(5664.38, -6395.13)
+scale = Vector2(3.16144, 1.14298)
+texture = ExtResource("4_kdhrc")
+
+[node name="Sjøgress19" type="Sprite2D" parent="."]
+position = Vector2(2958, -3544)
+scale = Vector2(1.31683, 1.2585)
+texture = ExtResource("3_w31kb")
+
+[node name="KorallLilla11" type="Sprite2D" parent="."]
+position = Vector2(1671, -3644)
+rotation = 0.359538
+texture = ExtResource("11_wqs7u")
+
+[node name="KorallLilla12" type="Sprite2D" parent="."]
+position = Vector2(418, -22396)
+texture = ExtResource("10_rc31j")
+
+[node name="KorallGul10" type="Sprite2D" parent="."]
+position = Vector2(2021, -22124)
+texture = ExtResource("8_jiwvm")
+
+[node name="KorallLilla13" type="Sprite2D" parent="."]
+position = Vector2(2683, -22062)
+texture = ExtResource("11_wqs7u")
+
+[node name="Sjøgress21" type="Sprite2D" parent="."]
+position = Vector2(391, -22260)
+texture = ExtResource("3_w31kb")
+
+[node name="KorallLilla14" type="Sprite2D" parent="."]
+position = Vector2(369, -21053)
+texture = ExtResource("10_rc31j")
+
+[node name="Sjøgress22" type="Sprite2D" parent="."]
+position = Vector2(2394, -22099)
+scale = Vector2(1.47887, 1.25)
+texture = ExtResource("2_b88go")
+
+[node name="Sjøgress23" type="Sprite2D" parent="."]
+position = Vector2(208, -20857)
+texture = ExtResource("4_kdhrc")
+
+[node name="KorallGul11" type="Sprite2D" parent="."]
+position = Vector2(950, -22252)
+texture = ExtResource("8_jiwvm")
+
+[node name="HaiPlaceholder" type="Sprite2D" parent="."]
+position = Vector2(-1618, -8111)
+texture = ExtResource("12_cajvh")
+
+[node name="HaiPlaceholder2" type="Sprite2D" parent="."]
+position = Vector2(11048, -17257)
+texture = ExtResource("12_cajvh")
+flip_h = true
+
+[node name="KorallGul12" type="Sprite2D" parent="."]
+position = Vector2(4822, -11743)
+rotation = -0.958186
+scale = Vector2(2.57222, 1.65642)
+texture = ExtResource("8_jiwvm")
+flip_h = true
+
+[node name="PufferfishFirstDraft" type="Sprite2D" parent="."]
+position = Vector2(552, -12201)
+scale = Vector2(0.428226, 0.437319)
+texture = ExtResource("13_jkomk")
+
+[node name="PufferfishFirstDraft2" type="Sprite2D" parent="."]
+position = Vector2(8831, -19843)
+scale = Vector2(0.399194, 0.437319)
+texture = ExtResource("13_jkomk")
+flip_h = true
+
+[node name="PufferfishFirstDraft3" type="Sprite2D" parent="."]
+position = Vector2(355, -25976.8)
+scale = Vector2(0.664516, 0.474928)
+texture = ExtResource("13_jkomk")
+
+[node name="ScuffedMermaid" type="Sprite2D" parent="."]
+position = Vector2(-1389, -17081)
+scale = Vector2(1.37411, 1.33008)
+texture = ExtResource("14_7t647")
+
+[node name="BallongMedSpikeball" type="Sprite2D" parent="."]
+position = Vector2(8734, -37480)
+scale = Vector2(0.375712, 0.359712)
+texture = ExtResource("15_4rr8p")
+
+[node name="Anemone" type="Sprite2D" parent="."]
+position = Vector2(2319, -7082)
+scale = Vector2(2.73932, 2.87784)
+texture = ExtResource("16_o5eq5")
+
+[node name="KorallLilla2" type="Sprite2D" parent="."]
+position = Vector2(1709, -6600.13)
+scale = Vector2(2.32716, 2.16446)
+texture = ExtResource("11_wqs7u")
+
+[node name="KoralStang1" type="Sprite2D" parent="."]
+position = Vector2(4985, -6734)
+scale = Vector2(2.4381, 1.72078)
+texture = ExtResource("17_whwpo")
+
+[node name="KoralStang2" type="Sprite2D" parent="."]
+position = Vector2(2111.5, -4194.5)
+scale = Vector2(1.50952, 1.4513)
+texture = ExtResource("17_whwpo")
+
+[node name="KoralStang3" type="Sprite2D" parent="."]
+position = Vector2(8668, -1097.5)
+scale = Vector2(1.71429, 1.4513)
+texture = ExtResource("17_whwpo")
+
+[node name="KoralStang4" type="Sprite2D" parent="."]
+position = Vector2(6196.5, -12000)
+scale = Vector2(1.96667, 1.72727)
+texture = ExtResource("17_whwpo")
+
+[node name="KoralStang5" type="Sprite2D" parent="."]
+position = Vector2(1479, -22207)
+scale = Vector2(1.86667, 1.65909)
+texture = ExtResource("17_whwpo")
+flip_h = true
+
+[node name="Sjøgress20" type="Sprite2D" parent="."]
+position = Vector2(1650, -22050.5)
+scale = Vector2(1.90141, 1.62917)
+texture = ExtResource("2_b88go")
