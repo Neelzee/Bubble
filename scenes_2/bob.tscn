@@ -11,6 +11,8 @@
 [ext_resource type="Texture2D" uid="uid://cors6snkpkm5n" path="res://assets/Bob the bubble/bob in love.png" id="5_ltal4"]
 [ext_resource type="Texture2D" uid="uid://c4n1v1lucpenp" path="res://assets/Bob the bubble/bob neutral.png" id="6_4wprp"]
 [ext_resource type="Texture2D" uid="uid://cyud7jqp0u65l" path="res://assets/Bob the bubble/bob dead.png" id="6_av1eh"]
+[ext_resource type="Script" path="res://scenes_2/MusicController.cs" id="12_2u5l3"]
+[ext_resource type="AudioStream" uid="uid://j3v7amfy2hvd" path="res://assets/sky theme.wav" id="13_fjh4t"]
 [ext_resource type="AudioStream" uid="uid://b2cmwh3vlyvhi" path="res://asset_2/sound effects/Walking2_cut.mp3" id="8_fyn6y"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_x4p8y"]
@@ -68,6 +70,8 @@ shape = SubResource("CircleShape2D_gwsfj")
 stream = ExtResource("4_v5sie")
 autoplay = true
 max_distance = 9.22337e+18
+script = ExtResource("12_2u5l3")
+OverwaterMusic = ExtResource("13_fjh4t")
 
 [node name="WalkingSound" type="AudioStreamPlayer2D" parent="."]
 max_distance = 9.22337e+18

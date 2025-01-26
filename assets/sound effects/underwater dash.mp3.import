@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cdx3pnpvpnmj2"
+path="res://.godot/imported/underwater dash.mp3-e5e16ac3162e38d3749a2f1688799990.mp3str"
+
+[deps]
+
+source_file="res://assets/sound effects/underwater dash.mp3"
+dest_files=["res://.godot/imported/underwater dash.mp3-e5e16ac3162e38d3749a2f1688799990.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
