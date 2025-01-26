@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://pd1cdp76ff01"]
+
+[ext_resource type="Texture2D" uid="uid://bwhf3leo48dn7" path="res://asset_2/korallrev1.png" id="1_vomor"]
+
+[node name="korallrev1" type="StaticBody2D"]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-75, 40, 1, 26, 129, 39, 181, 57, 199, 89, 177, 128, 15, 163, -5, 164, -34, 258, -182, 373, -411, 350, -401, 135, -399, -34, -386, -142, -509, -157, -524, -334, -149, -377, 189, -330, 487, -255, 526, -230, 529, -207, 484, -182, 289, -169, -58, -64, -112, -4)
+
+[node name="Korallrev1" type="Sprite2D" parent="."]
+position = Vector2(2, -3)
+texture = ExtResource("1_vomor")

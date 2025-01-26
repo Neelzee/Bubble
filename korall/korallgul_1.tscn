@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://cv0rmqgu8530q"]
+
+[ext_resource type="Texture2D" uid="uid://cl8yip7krpfs" path="res://asset_2/korall gul1.png" id="1_k85jp"]
+
+[node name="korallgul1" type="StaticBody2D"]
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-156, -87, -76, -40, -54, -82, 15, -143, 137, -88, 140, -17, 141, 72, 65, 143, -12, 112)
+
+[node name="KorallGul1" type="Sprite2D" parent="."]
+position = Vector2(-1, 0)
+texture = ExtResource("1_k85jp")

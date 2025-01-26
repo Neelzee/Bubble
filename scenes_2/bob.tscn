@@ -14,8 +14,8 @@ radius = 34.1321
 [sub_resource type="CircleShape2D" id="CircleShape2D_gwsfj"]
 radius = 34.0588
 
-[node name="bob" type="CharacterBody2D"]
-collision_mask = 6
+[node name="bob" type="CharacterBody2D" groups=["bob"]]
+collision_mask = 14
 script = ExtResource("2_0iqe3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

@@ -13,7 +13,6 @@ public partial class DeathBox : Area2D
 	{
 	}
 
-	public void OnBobBodyEnter(PhysicsBody2D body) {
-		
+	public void OnBobBodyEnter(PhysicsBody2D body){
 	}
 }
