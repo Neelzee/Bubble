@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://b8bfuvw5delpi"]
+[gd_scene load_steps=5 format=3 uid="uid://b8bfuvw5delpi"]
 
 [ext_resource type="Script" path="res://Titlescreen.gd" id="1_kbc16"]
+[ext_resource type="Texture2D" uid="uid://diymtphhnl2bq" path="res://assets/to the moon and back.png" id="1_mqkh2"]
 [ext_resource type="PackedScene" uid="uid://b8lu2tqniofbn" path="res://pufferfish.tscn" id="2_x4n2c"]
+[ext_resource type="PackedScene" uid="uid://crp0174umumju" path="res://balloon.tscn" id="4_xf0yb"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -10,6 +12,11 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="ToTheMoonAndBack" type="Sprite2D" parent="."]
+position = Vector2(576, 317)
+scale = Vector2(0.85612, 0.85612)
+texture = ExtResource("1_mqkh2")
 
 [node name="StartButton" type="Button" parent="."]
 layout_mode = 0
@@ -23,13 +30,23 @@ script = ExtResource("1_kbc16")
 
 [node name="pufferfish2" parent="." instance=ExtResource("2_x4n2c")]
 position = Vector2(773, 533)
-Speed = 500.0
-TopSpeed = 550.0
+scale = Vector2(2, 2)
+Speed = 250.0
+TopSpeed = 300.0
 
 [node name="pufferfish" parent="." instance=ExtResource("2_x4n2c")]
 position = Vector2(338, 217)
+scale = Vector2(2, 2)
 Distance = 300.0
-Speed = 400.0
+Speed = 300.0
 TopSpeed = 350.0
+
+[node name="Balloon" parent="." instance=ExtResource("4_xf0yb")]
+position = Vector2(182, 156)
+scale = Vector2(0.5, 0.5)
+
+[node name="Balloon2" parent="." instance=ExtResource("4_xf0yb")]
+position = Vector2(1073, 259)
+scale = Vector2(0.5, 0.5)
 
 [connection signal="pressed" from="StartButton" to="StartButton" method="_on_pressed"]
