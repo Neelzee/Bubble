@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bv5admfsgidhw"]
 
-[ext_resource type="Texture2D" uid="uid://xjy0q7bg2gmx" path="res://asset_2/korall rev2.png" id="1_6xtg8"]
+[ext_resource type="Texture2D" uid="uid://ptba6sas844l" path="res://asset_2/korall rev2.png" id="1_6xtg8"]
 
 [node name="korallrev2" type="StaticBody2D"]
 collision_layer = 2

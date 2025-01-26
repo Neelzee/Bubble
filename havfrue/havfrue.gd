@@ -9,11 +9,13 @@ var nav: NavigationAgent2D = $NavigationAgent2D
 var player
 @onready
 var map: NavigationRegion2D = $"../NavigationRegion2D"
-#func _ready() -> void:
-#	player=get_node("../Bob").global_position
-#print(player)
+var count = 10
+var tick = 0
 func _physics_process(delta: float) -> void:
-	player=get_node("../Bob").global_position
+	tick += delta
+	if (tick <= count):
+		return
+	player=get_node("/root/main/bob").global_position
 	var direction = Vector3()
 	
 	#var distance
