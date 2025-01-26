@@ -12,11 +12,11 @@ grow_vertical = 2
 
 [node name="StartButton" type="Button" parent="."]
 layout_mode = 0
-offset_left = 217.0
-offset_top = 231.0
-offset_right = 263.0
-offset_bottom = 262.0
-scale = Vector2(15.5556, 6.90319)
+offset_left = 409.0
+offset_top = 339.0
+offset_right = 455.0
+offset_bottom = 370.0
+scale = Vector2(6.33252, 3.98166)
 text = "Start"
 script = ExtResource("1_kbc16")
 

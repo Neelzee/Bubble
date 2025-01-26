@@ -1,0 +1,98 @@
+[gd_scene load_steps=9 format=3 uid="uid://d32btohuc7un4"]
+
+[ext_resource type="Texture2D" path="res://game level placeholder.PNG" id="1_1hrov"]
+[ext_resource type="PackedScene" uid="uid://b3y4o8fnebjdw" path="res://Player.tscn" id="2_bbq6a"]
+[ext_resource type="PackedScene" uid="uid://mvus02dx3ddl" path="res://wall.tscn" id="3_tx4v1"]
+[ext_resource type="PackedScene" uid="uid://bfmfa6ar2qgsh" path="res://spike.tscn" id="4_okf58"]
+[ext_resource type="PackedScene" uid="uid://b0hyajb24aqd2" path="res://sirkel.tscn" id="5_rgsn1"]
+[ext_resource type="PackedScene" uid="uid://bbhhgsmeq0mn6" path="res://havfrue/havfrue.tscn" id="6_0s3u7"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_tr3ji"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_es6aw"]
+vertices = PackedVector2Array(8452.3, -10935.5, 714.023, -11313.2, 8855.61, -11264, 759.602, -8836.2, 487.961, -7245.22, 430.32, -9142.75, 8390.69, -8958.77, 4816.02, -8742.98, 7495.08, -8251.23, 9067.92, -10576.8, 8874.21, -6759.23)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2), PackedInt32Array(3, 4, 5), PackedInt32Array(3, 5, 6, 7), PackedInt32Array(8, 7, 6), PackedInt32Array(6, 0, 2, 9, 10), PackedInt32Array(6, 10, 8)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(8381, -8969, 420, -9153, 481, -7145, 768, -8826, 4815, -8733, 7490, -8242, 8883, -6735, 9078, -10578, 8863, -11274, 246, -11326, 8442, -10926)])
+
+[node name="main" type="Node2D"]
+metadata/_edit_lock_ = true
+
+[node name="background" type="Sprite2D" parent="."]
+position = Vector2(4810, -29846)
+scale = Vector2(9.10979, 11.1034)
+texture = ExtResource("1_1hrov")
+
+[node name="Node2D" parent="." instance=ExtResource("3_tx4v1")]
+position = Vector2(1748, -6113)
+rotation = 0.247046
+scale = Vector2(31.4906, 5.20647)
+
+[node name="Node2D2" parent="." instance=ExtResource("3_tx4v1")]
+position = Vector2(8759, -6041)
+rotation = -0.248984
+scale = Vector2(31.4906, 5.20647)
+
+[node name="Bob" parent="." instance=ExtResource("2_bbq6a")]
+position = Vector2(4108, -2864)
+
+[node name="Camera2D" type="Camera2D" parent="Bob"]
+scale = Vector2(4.60418, 6.17908)
+zoom = Vector2(0.12, 0.12)
+position_smoothing_enabled = true
+
+[node name="Left" type="StaticBody2D" parent="."]
+rotation = 1.5708
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Left"]
+shape = SubResource("WorldBoundaryShape2D_tr3ji")
+
+[node name="Right" type="StaticBody2D" parent="."]
+position = Vector2(9619, 0)
+rotation = 4.71239
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Right"]
+shape = SubResource("WorldBoundaryShape2D_tr3ji")
+
+[node name="Up" type="StaticBody2D" parent="."]
+position = Vector2(9614, -59684)
+rotation = 3.14159
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Up"]
+shape = SubResource("WorldBoundaryShape2D_tr3ji")
+
+[node name="Down" type="StaticBody2D" parent="."]
+position = Vector2(9411, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Down"]
+shape = SubResource("WorldBoundaryShape2D_tr3ji")
+
+[node name="Node2D3" parent="." instance=ExtResource("4_okf58")]
+position = Vector2(3941, -5603)
+rotation = 0.217517
+scale = Vector2(10.2022, 5.59372)
+
+[node name="Node2D4" parent="." instance=ExtResource("4_okf58")]
+position = Vector2(6630, -5558)
+rotation = 2.96166
+scale = Vector2(10.2022, 5.59372)
+
+[node name="Node2D5" parent="." instance=ExtResource("5_rgsn1")]
+position = Vector2(5683, -7170)
+rotation = 0.252226
+scale = Vector2(71.5941, 16.5946)
+
+[node name="Node2D6" parent="." instance=ExtResource("5_rgsn1")]
+position = Vector2(1742, -7748)
+scale = Vector2(18.7877, 10.234)
+
+[node name="Node2D7" parent="." instance=ExtResource("3_tx4v1")]
+position = Vector2(3698, -10127)
+scale = Vector2(69.6506, 9.40496)
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+navigation_polygon = SubResource("NavigationPolygon_es6aw")
+
+[node name="Havfrue" parent="." instance=ExtResource("6_0s3u7")]
+position = Vector2(8963, -10127)
+scale = Vector2(0.148085, 0.171551)
+safe_margin = 8.613
